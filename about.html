@@ -9,7 +9,6 @@
   <meta property="og:title" content="About Us | NTU Semiconductor Club">
   <meta property="og:description" content="Full-stack semiconductor education at NTU: Design, Fabrication, and Applications.">
   <meta property="og:image" content="images/hero.jpg">
-  <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
@@ -25,11 +24,11 @@
 
   <div id="wrapper">
 
-    <!-- Navigation Header -->
+    <!-- Meta Header Bar -->
     <nav id="nav" role="navigation" aria-label="Main Navigation">
       <a href="index.html" class="nav-brand">
         <img src="images/logo.png" alt="NTU Semiconductor Club Logo" class="nav-brand-img">
-        <span>NTU SEMICONDUCTOR CLUB</span>
+        <span>NTU Semiconductor Club</span>
       </a>
 
       <button class="mobile-toggle" aria-label="Toggle navigation menu">
@@ -37,112 +36,100 @@
       </button>
 
       <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html" class="active">ABOUT</a></li>
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="committee.html">COMMITTEE</a></li>
-        <li><a href="join.html">JOIN & CONTACT</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="join.html">Join & Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Page Header Banner -->
+    <!-- Meta Header Banner -->
     <header class="hero">
-      <div class="hero-content">
-        <span class="hero-tag">About Us</span>
-        <h1>The Full-Stack Vision</h1>
-        <p>A student-led organization at Nanyang Technological University dedicated to teaching full-stack semiconductors—from silicon design and fab to embedded, GPU, and AI programming.</p>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>The Full-Stack Semiconductor Vision</h1>
+          <p>A student-led organization at Nanyang Technological University dedicated to teaching full-stack semiconductors—from silicon design and fab to embedded, GPU, and AI programming.</p>
+        </div>
+        <div class="hero-media">
+          <img src="images/industry.jpg" alt="Industry Collaboration" loading="lazy">
+        </div>
       </div>
     </header>
 
     <main>
-      <!-- Main Overview Section -->
+      <!-- Purpose Overview -->
       <section class="section">
-        <div class="section-title">
+        <div class="section-header">
           <h2>Bridging Hardware Design, Fabrication & Software Use</h2>
-          <p>Semiconductor technology goes beyond single chips. We prepare students for the full lifecycle: designing circuits, fabricating silicon, and programming the embedded systems, GPUs, and AI models that run on them.</p>
+          <p>Semiconductor technology requires engineers who understand the full lifecycle: designing circuits, fabricating silicon, and programming the embedded systems, GPUs, and AI models that run on them.</p>
         </div>
 
-        <div class="image-text" style="margin-bottom: 50px;">
-          <img src="images/industry.jpg" alt="Semiconductor Industry Group" width="600" height="400" loading="lazy">
-          
-          <div class="image-text-content">
-            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-top: 0; color: var(--text-main);">Why "Full-Stack" Semiconductor?</h3>
-            <p>
-              Modern microelectronics requires engineers who understand both hardware and software. By exposing students to IC design, foundry fabrication, embedded microcontrollers, GPU computing (CUDA/HIP), and AI acceleration, we build well-rounded engineering leaders ready for industry.
-            </p>
-          </div>
-        </div>
-
-        <!-- Vision & Mission Grid -->
-        <div class="grid" style="margin-bottom: 50px;">
+        <div class="grid" style="margin-bottom: 24px;">
           <div class="card">
-            <h3><i class="fa-solid fa-compass" style="color: #60a5fa; margin-right: 8px;"></i> Vision</h3>
-            <p>
-              Cultivating an interdisciplinary "Full Stack" club to prepare NTU students for innovation and careers across the entire semiconductor value chain—design, fabrication, packaging, and high-level software application.
-            </p>
+            <h3>Vision</h3>
+            <p>To build an interdisciplinary club preparing NTU students for careers across the entire semiconductor value chain—design, fabrication, packaging, and high-level software applications.</p>
           </div>
 
           <div class="card">
-            <h3><i class="fa-solid fa-bullseye" style="color: #60a5fa; margin-right: 8px;"></i> Mission</h3>
-            <p>
-              To organize practical workshops, industrial site visits, cleanroom tours, and coding sessions covering hardware design, fab processes, embedded systems, and GPU/AI programming.
-            </p>
+            <h3>Mission</h3>
+            <p>To organize practical workshops, industrial site visits, cleanroom tours, and coding sessions covering hardware design, fab processes, embedded microcontrollers, and GPU/AI programming.</p>
           </div>
         </div>
 
-        <!-- Strategic Focus Areas -->
-        <div class="section-title" style="margin-top: 60px;">
+        <!-- Learning Pillars -->
+        <div class="section-header" style="margin-top: 36px;">
           <h2>Core Learning Pillars</h2>
         </div>
 
         <div class="grid">
           <div class="card">
-            <h3><i class="fa-solid fa-pen-ruler" style="color: #60a5fa; margin-right: 8px;"></i> IC Design & VLSI</h3>
+            <h3>IC Design & VLSI</h3>
             <p>Digital logic, analog circuits, EDA tools, and computer architecture layout.</p>
           </div>
 
           <div class="card">
-            <h3><i class="fa-solid fa-building" style="color: #60a5fa; margin-right: 8px;"></i> Fabrication & Cleanroom</h3>
+            <h3>Fabrication & Cleanroom</h3>
             <p>Wafer fab tours, lithography, materials science, and semiconductor packaging.</p>
           </div>
 
           <div class="card">
-            <h3><i class="fa-solid fa-code" style="color: #60a5fa; margin-right: 8px;"></i> Embedded & RTOS</h3>
+            <h3>Embedded & RTOS</h3>
             <p>Embedded C/C++, microcontrollers, sensor interfaces, and hardware programming.</p>
           </div>
 
           <div class="card">
-            <h3><i class="fa-solid fa-brain" style="color: #60a5fa; margin-right: 8px;"></i> GPU & AI Programming</h3>
-            <p>GPU parallel programming (CUDA), AI model acceleration, and hardware-software optimization.</p>
+            <h3>GPU & AI Programming</h3>
+            <p>GPU parallel programming (CUDA), AI model acceleration, and software-hardware optimization.</p>
           </div>
         </div>
       </section>
 
       <!-- Join CTA Section -->
-      <section class="section dark-section">
-        <div class="join-box">
-          <h2>Explore Full-Stack Semiconductor Engineering</h2>
-          <p>Join NTU Semiconductor Club and start building skills across chip design, fabrication, and GPU/AI applications.</p>
-          <a href="join.html" class="btn"><i class="fa-solid fa-user-plus"></i> Join Us Today</a>
+      <section class="section">
+        <div class="card" style="text-align: center; padding: 36px 24px;">
+          <h2 style="font-size: 1.4rem; margin-top: 0; margin-bottom: 8px;">Explore Full-Stack Semiconductor Engineering</h2>
+          <p style="color: var(--meta-text-secondary); max-width: 520px; margin: 0 auto 20px auto;">Join NTU Semiconductor Club and start building skills across chip design, fabrication, and GPU/AI applications.</p>
+          <a href="join.html" class="btn">Join Membership</a>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Meta Footer -->
     <footer>
-      <div class="footer-content">
+      <div class="footer-container">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="NTU Semiconductor Club Logo" style="height: 26px; width: auto; vertical-align: middle; margin-right: 6px;">
-          NTU Semiconductor Club
+          <img src="images/logo.png" alt="NTU Semiconductor Club Logo" style="height: 24px; width: auto;">
+          <span>NTU Semiconductor Club</span>
         </div>
-        <div class="footer-email">
-          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg"><i class="fa-regular fa-envelope"></i> ntu.semiconductor.club@ntu.edu.sg</a>
+        <div class="footer-links">
+          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;"><i class="fa-brands fa-telegram" style="color: #24A1DE;"></i> Telegram</a>
+          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i> LinkedIn</a>
+          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;"><i class="fa-regular fa-envelope"></i> Email</a>
         </div>
-        <div class="footer-social" style="display: flex; gap: 12px; justify-content: center; margin: 12px 0;">
-          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;"><i class="fa-brands fa-telegram" style="color: #24A1DE;"></i> Telegram</a>
-          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i> LinkedIn</a>
+        <div class="footer-copy">
+          &copy; 2026 NTU Semiconductor Club. Nanyang Technological University, Singapore.
         </div>
-        <p class="footer-copy">&copy; 2026 NTU Semiconductor Club. Nanyang Technological University, Singapore.</p>
       </div>
     </footer>
 
