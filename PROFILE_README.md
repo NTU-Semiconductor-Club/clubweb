@@ -2,7 +2,8 @@
 
 <div align="center">
   <img src="images/logo.png" alt="NTU Semiconductor Club Logo" width="160">
-  <h3>Connecting NTU Students, Industry Leaders, and Microelectronics Innovation</h3>
+  <h3>The Full-Stack Semiconductor Community at NTU Singapore</h3>
+  <p><b>Design • Fabrication • Embedded Systems • GPU & AI Acceleration</b></p>
   
   <p>
     <a href="https://ntu-semiconductor-club.github.io/clubweb"><b>Official Website</b></a> •
@@ -13,28 +14,32 @@
 
 ---
 
-### ⚡ About Us
+### ⚡ Our "Full-Stack" Vision
 
-The **NTU Semiconductor Club** is a student-led organization at **Nanyang Technological University (NTU), Singapore**. We bridge classroom engineering theory with real-world industry practice by organizing foundry site visits, cleanroom tours, technical workshops, and career networking sessions with leading semiconductor firms.
+The **NTU Semiconductor Club** is an interdisciplinary student organization at **Nanyang Technological University (NTU), Singapore**. Our mission is to educate and empower students across the **complete semiconductor value chain**:
+
+1. 🎨 **IC Design & Architecture**: Circuit design, VLSI logic, and processor architecture.
+2. 🏭 **Fabrication & Cleanroom Operations**: Wafer fab processes, lithography, thin films, and packaging.
+3. 💻 **Embedded & GPU Applications**: Embedded C/C++ firmware, CUDA GPU parallel programming, and AI hardware acceleration.
 
 ---
 
 ### 📊 Club Impact & Community Stats
 
 ```text
-  ⚡ 400+ Students Engaged Across NTU Engineering & Science Schools
+  ⚡ 400+ Students Engaged Across NTU Engineering, Computing & Science Schools
   🏭 10+  Industry Site Visits & Cleanroom Fab Tours Conducted
-  🎓 10+  Hands-on Workshops & Career Seminars Hosted
+  🎓 10+  Hands-on Workshops (IC Design, Fab, Embedded & GPU/AI) Hosted
 ```
 
 ---
 
-### 🔬 Core Initiatives & Focus Areas
+### 🔬 Core Initiatives & Pillars
 
-* 🏭 **Industry Site Visits**: Guided tours of semiconductor foundries, cleanrooms, and testing facilities (GlobalFoundries, AMD, A*STAR IME, N2FC).
-* 🛠️ **Technical Workshops**: Student workshops covering IC design principles, device physics, and cleanroom fabrication steps.
-* 🤝 **Peer Network**: Connecting students from Electrical Engineering, Computer Engineering, Materials Science, and Physics.
-* 💼 **Career Seminars**: Panel discussions, internship opportunities, and mentorship with industry engineers.
+* 🏭 **Industry Site Visits**: Guided tours of commercial foundries and research labs (GlobalFoundries, AMD, A*STAR IME, N2FC).
+* 🛠️ **Full-Stack Technical Workshops**: Hands-on series covering IC design, cleanroom fab steps, embedded microcontrollers, and GPU CUDA programming.
+* 🤝 **Interdisciplinary Network**: Connecting students from Electrical Engineering, Computer Engineering, Computer Science, Materials Engineering, and Physics.
+* 💼 **Career Seminars**: Industry panel discussions, internship placements, and mentorship with hardware & software engineers.
 
 ---
 
