@@ -1,4 +1,4 @@
-/* Meta / Facebook Design System (100% Pixel-Perfect Alignment) */
+/* Meta / Facebook Design System (Mobile-Optimized & Prominent Logo) */
 :root {
   --meta-blue: #0866ff;
   --meta-blue-hover: #0052cc;
@@ -75,7 +75,7 @@ img {
   background: var(--meta-bg);
 }
 
-/* ==================== NAVIGATION BAR (FULL WIDTH & ALIGNED) ==================== */
+/* ==================== NAVIGATION BAR & PROMINENT LOGO ==================== */
 #nav {
   position: sticky;
   top: 0;
@@ -89,32 +89,59 @@ img {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  height: 60px;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.1rem;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 1.15rem;
   color: var(--meta-text-primary);
   letter-spacing: -0.01em;
 }
 
+/* Prominent Club Logo */
 .nav-brand-img {
-  height: 34px;
+  height: 48px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: transform 0.2s ease;
+}
+
+.nav-brand:hover .nav-brand-img {
+  transform: scale(1.04);
+}
+
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.nav-brand-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--meta-text-primary);
+}
+
+.nav-brand-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--meta-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 #nav ul {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -148,13 +175,18 @@ img {
 
 .mobile-toggle {
   display: none;
-  background: transparent;
-  border: none;
+  background: var(--meta-surface-subtle);
+  border: 1px solid var(--meta-border);
   color: var(--meta-text-primary);
   font-size: 1.3rem;
   cursor: pointer;
-  padding: 6px;
+  padding: 8px 12px;
   border-radius: var(--meta-radius-sm);
+  transition: background 0.15s ease;
+}
+
+.mobile-toggle:hover {
+  background: var(--meta-border);
 }
 
 /* ==================== BUTTONS ==================== */
@@ -191,23 +223,22 @@ img {
   filter: brightness(0.95);
 }
 
-/* ==================== HERO / HEADER BANNER (DYNAMIC LAYOUT) ==================== */
+/* ==================== HERO BANNER ==================== */
 header.hero {
   background: var(--meta-surface);
   border-bottom: 1px solid var(--meta-border);
-  padding: 48px 0;
+  padding: 40px 0;
   width: 100%;
 }
 
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* 2-Column layout when hero-media is present */
 .hero-container:has(.hero-media) {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -215,8 +246,28 @@ header.hero {
   align-items: center;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 102, 255, 0.08);
+  border: 1px solid rgba(8, 102, 255, 0.2);
+  color: var(--meta-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.hero-badge-logo {
+  height: 18px;
+  width: auto;
+}
+
 .hero-content h1 {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -248,20 +299,20 @@ header.hero {
   max-height: 340px;
 }
 
-/* ==================== SECTION CONTAINER (EDGES ALIGNED) ==================== */
+/* ==================== SECTION CONTAINER ==================== */
 .section {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 36px 24px 12px 24px;
+  padding: 32px 20px 12px 20px;
 }
 
 .section-header {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .section-header h2 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   margin: 0 0 6px 0;
@@ -274,29 +325,29 @@ header.hero {
   margin: 0;
 }
 
-/* ==================== RESPONSIVE GRIDS ==================== */
+/* ==================== GRIDS ==================== */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .card {
   background: var(--meta-surface);
   border-radius: var(--meta-radius-md);
-  padding: 24px;
+  padding: 20px;
   border: 1px solid var(--meta-border);
   box-shadow: var(--meta-shadow);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -311,7 +362,7 @@ header.hero {
 .card h3 {
   margin-top: 0;
   margin-bottom: 8px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--meta-text-primary);
 }
@@ -352,7 +403,7 @@ header.hero {
 }
 
 .event-card-body {
-  padding: 20px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -382,7 +433,7 @@ header.hero {
   box-shadow: var(--meta-shadow);
   overflow: hidden;
   text-align: center;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 }
 
 .person-card-banner {
@@ -428,13 +479,13 @@ header.hero {
 .stats-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
   background: var(--meta-surface);
   border-radius: var(--meta-radius-md);
   border: 1px solid var(--meta-border);
-  padding: 24px;
+  padding: 20px;
   box-shadow: var(--meta-shadow);
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .stat-item {
@@ -443,23 +494,23 @@ header.hero {
 
 .stat-item h3 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--meta-blue);
 }
 
 .stat-item p {
   margin: 4px 0 0 0;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--meta-text-secondary);
   font-weight: 600;
 }
 
-/* ==================== FOOTER (FULL WIDTH & PERFECTLY ALIGNED) ==================== */
+/* ==================== FOOTER ==================== */
 footer {
   background: var(--meta-surface);
   border-top: 1px solid var(--meta-border);
-  padding: 32px 0;
+  padding: 28px 0;
   margin-top: auto;
   width: 100%;
 }
@@ -467,7 +518,7 @@ footer {
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -484,9 +535,14 @@ footer {
   color: var(--meta-text-primary);
 }
 
+.footer-brand-img {
+  height: 32px;
+  width: auto;
+}
+
 .footer-links {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -494,26 +550,69 @@ footer {
   font-size: 0.82rem;
   color: var(--meta-text-muted);
   width: 100%;
-  margin-top: 16px;
+  margin-top: 14px;
   text-align: center;
 }
 
-/* ==================== MOBILE & TABLET RESPONSIVE RULES ==================== */
+/* ==================== MOBILE & TABLET UX OPTIMIZATION ==================== */
 @media (max-width: 900px) {
   .hero-container:has(.hero-media) {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
   .grid-3, .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .grid, .grid-3, .grid-4, .stats-row {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .nav-container {
+    height: 60px;
+    padding: 0 16px;
   }
   
+  .nav-brand-img {
+    height: 38px;
+  }
+  
+  .nav-brand-title {
+    font-size: 0.98rem;
+  }
+  
+  .nav-brand-sub {
+    font-size: 0.65rem;
+  }
+
+  header.hero {
+    padding: 28px 0;
+  }
+
+  .hero-container {
+    padding: 0 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .section {
+    padding: 24px 16px 8px 16px;
+  }
+
+  .grid, .grid-3, .grid-4, .stats-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .event-card-img-wrapper {
+    height: 160px;
+  }
+
   .mobile-toggle {
     display: block;
   }
@@ -527,8 +626,8 @@ footer {
     background: var(--meta-surface);
     border-bottom: 1px solid var(--meta-border);
     flex-direction: column;
-    padding: 12px 24px;
-    box-shadow: var(--meta-shadow-hover);
+    padding: 12px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   }
 
   #nav ul.show {
@@ -542,11 +641,21 @@ footer {
   #nav a {
     display: block;
     width: 100%;
-    padding: 10px 16px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border-radius: var(--meta-radius-sm);
   }
 
   .footer-container {
     flex-direction: column;
     text-align: center;
+    gap: 14px;
+    padding: 0 16px;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
