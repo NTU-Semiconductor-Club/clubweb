@@ -1,21 +1,21 @@
 # NTU Semiconductor Club Website ⚡
 
 [![NTU Semiconductor Club](https://img.shields.io/badge/NTU-Semiconductor_Club-0066ff?style=for-the-badge&logo=microchip&logoColor=white)](https://ntu-semiconductor-club.github.io/clubweb)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.style=for-the-badge)](LICENSE)
+[![Telegram](https://img.shields.io/badge/Telegram-Group-24A1DE?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+Wsb5No5hvnxlMjRl)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Company-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/ntu-semiconductor-club/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-Official website for the **NTU Semiconductor Club** at Nanyang Technological University (NTU). Connecting students, industry leaders, and microelectronics researchers across the global semiconductor ecosystem.
+Official web portal for the **NTU Semiconductor Club** at Nanyang Technological University (NTU), Singapore. Teaching full-stack microelectronics from IC design and wafer fab to embedded systems, GPU computing, and AI hardware acceleration.
 
 ---
 
-## 🌟 Features
+## 🌟 Key Pages & Features
 
-* **Sleek Silicon Dark Theme**: Deep dark palette (`#030814`) with glassmorphism, glowing cyan badges, and fluid micro-interactions.
-* **Fully Responsive**: Optimized across mobile, tablet, laptop, and desktop displays with responsive grid structures and a mobile navigation drawer.
-* **SEO & Social Metadata**: Pre-configured with Open Graph metadata, semantic HTML5 tags (`<nav>`, `<main>`, `<header>`, `<section>`, `<footer>`), and accessible ARIA attributes.
-* **Zero External Dependencies**: Pure Vanilla HTML5, CSS3, and JavaScript — fast, lightweight, and easy to deploy anywhere.
+* **Home (`index.html`)**: Overview of the full-stack semiconductor vision, quick impact stats, and industry visits.
+* **About Us (`about.html`)**: Core purpose, full-stack vision, and strategic learning pillars.
+* **Events (`events.html`)**: Industrial site visits (GlobalFoundries, AMD, A*STAR IME, N2FC), workshops, and GPU/AI programming panels.
+* **Committee (`committee.html`)**: Executive leadership team and portfolio leads.
+* **Join & Contact (`join.html`)**: All official contact channels (Telegram, LinkedIn, Email, GitHub), membership benefits, eligibility, and FAQ.
 
 ---
 
@@ -23,77 +23,39 @@ Official website for the **NTU Semiconductor Club** at Nanyang Technological Uni
 
 ```text
 .
-├── index.html              # Landing page (Hero, Impact Stats, Core Tech, Featured Events)
-├── about.html              # About Us (Vision, Mission, Strategic Pillars)
-├── events.html             # Club Activities (Cleanroom Visits, Technical Workshops, Career Seminars)
-├── committee.html          # Leadership Team (Executive Committee & Portfolio Leads)
-├── join.html               # Membership & Registration (Benefits, Discipline Eligibility, Steps)
+├── index.html              # Home landing page
+├── about.html              # About Us & Full-Stack Vision
+├── events.html             # Club activities, site visits & workshops
+├── committee.html          # Executive leadership team
+├── join.html               # Combined Join Us & Contact Us page (All official links)
+├── ARCHITECTURE.md         # Architecture diagrams, design system tokens, and vibe coding guide
+├── CONTRIBUTING.md         # Humanizer style rules & AI agent guidelines
+├── PROFILE_README.md       # GitHub Organization Profile README template
+├── .nojekyll               # Disables Jekyll processing on GitHub Pages
+├── robots.txt              # Search engine directives
+├── sitemap.xml             # XML sitemap for SEO
 ├── assets/
 │   ├── css/
-│   │   └── main.css        # Core stylesheet (Design system, typography, glassmorphic cards, layout)
+│   │   └── main.css        # Unified Design System stylesheet
 │   └── js/
-│       └── main.js         # Sticky navbar scroll listener, active link detector, mobile menu drawer
-├── images/                 # Standardized high-res website image assets (.jpg)
-│   └── committee/          # Executive committee member headshots
-├── .github/
-│   └── workflows/
-│       └── deploy.yml      # Automated GitHub Pages CI/CD deployment workflow
-├── .gitignore              # Standard gitignore exclusions
-├── LICENSE                 # MIT License
-└── README.md               # Project documentation
+│       └── main.js         # Navigation scroll, active links, and mobile menu scripts
+└── images/                 # Optimized image assets
+    ├── logo.png            # Official Lion Club Logo
+    └── committee/          # Committee member headshots
 ```
 
 ---
 
-## 🚀 Getting Started
+## 📬 Official Community & Contact Channels
 
-### Local Development
-
-Since this project is built with Vanilla HTML/CSS/JS, no build step or node package installation is required!
-
-1. **Clone the repository**:
-   ```bash
-   git clone git@github.com:NTU-Semiconductor-Club/clubweb.git
-   cd clubweb
-   ```
-
-2. **Run locally using any static web server**:
-
-   * **Using Python**:
-     ```bash
-     python3 -m http.server 8000
-     ```
-     Then open `http://localhost:8000` in your browser.
-
-   * **Using VS Code Live Server Extension**:
-     Right-click `index.html` and select **"Open with Live Server"**.
-
-   * **Using Node `serve`**:
-     ```bash
-     npx serve .
-     ```
-
----
-
-## 🌐 Deployment
-
-### GitHub Pages Setup
-
-This repository is configured for automated deployment to **GitHub Pages**:
-
-1. Go to repository **Settings** > **Pages**.
-2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
-3. Pushing changes to the `main` branch will automatically trigger `.github/workflows/deploy.yml` and publish the site.
-
----
-
-## 📬 Contact & Community
-
-* **Email**: [ntu.semiconductor.club@ntu.edu.sg](mailto:ntu.semiconductor.club@ntu.edu.sg)
-* **Organization**: Nanyang Technological University (NTU), Singapore
+* ✈️ **Telegram Group**: [Join NTU Semiconductor Club Telegram](https://t.me/+Wsb5No5hvnxlMjRl)
+* 💼 **LinkedIn Page**: [Follow NTU Semiconductor Club on LinkedIn](https://www.linkedin.com/company/ntu-semiconductor-club/)
+* 🌐 **Official Web Portal**: [NTU Semiconductor Club Website](https://ntu-semiconductor-club.github.io/clubweb)
+* 📧 **Email**: [ntu.semiconductor.club@ntu.edu.sg](mailto:ntu.semiconductor.club@ntu.edu.sg)
+* 📍 **Location**: Nanyang Technological University (NTU), 50 Nanyang Ave, Singapore 639798
 
 ---
 
 ## 📄 License
 
-Distributed under the [MIT License](LICENSE). See `LICENSE` for more information.
+Distributed under the [MIT License](LICENSE).
