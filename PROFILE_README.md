@@ -1,7 +1,7 @@
 # 👋 Welcome to NTU Semiconductor Club
 
 <div align="center">
-  <img src="images/logo.png" alt="NTU Semiconductor Club Logo" width="160">
+  <img src="https://raw.githubusercontent.com/NTU-Semiconductor-Club/.github/main/images/logo.png" alt="NTU Semiconductor Club Logo" width="160">
   <h3>The Full-Stack Semiconductor Community at NTU Singapore</h3>
   <p><b>Design • Fabrication • Embedded Systems • GPU & AI Acceleration</b></p>
   
