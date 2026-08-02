@@ -1,15 +1,15 @@
 # 👋 Welcome to NTU Semiconductor Club
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/NTU-Semiconductor-Club/.github/main/images/logo.png" alt="NTU Semiconductor Club Logo" width="160">
+  <img src="https://raw.githubusercontent.com/NTU-Semiconductor-Club/.github/main/images/logo.png" alt="NTU Semiconductor Club Logo" width="150">
   <h3>The Full-Stack Semiconductor Community at NTU Singapore</h3>
   <p><b>Design • Fabrication • Embedded Systems • GPU & AI Acceleration</b></p>
   
   <p>
     <a href="https://ntu-semiconductor-club.github.io/clubweb"><b>Official Website</b></a> •
-    <a href="https://t.me/+Wsb5No5hvnxlMjRl"><b>Telegram Group</b></a> •
+    <a href="https://t.me/+Wsb5No5hvnxlMjRl"><b>Telegram Community</b></a> •
     <a href="https://www.linkedin.com/company/ntu-semiconductor-club/"><b>LinkedIn Page</b></a> •
-    <a href="mailto:ntu.semiconductor.club@ntu.edu.sg"><b>Contact Us</b></a>
+    <a href="mailto:ntu.semiconductor.club@ntu.edu.sg"><b>Email Us</b></a>
   </p>
 </div>
 
@@ -19,9 +19,10 @@
 
 The **NTU Semiconductor Club** is an interdisciplinary student organization at **Nanyang Technological University (NTU), Singapore**. Our mission is to educate and empower students across the **complete semiconductor value chain**:
 
-1. 🎨 **IC Design & Architecture**: Circuit design, VLSI logic, and processor architecture.
-2. 🏭 **Fabrication & Cleanroom Operations**: Wafer fab processes, lithography, thin films, and packaging.
-3. 💻 **Embedded & GPU Applications**: Embedded C/C++ firmware, CUDA GPU parallel programming, and AI hardware acceleration.
+1. 🎨 **IC Design & Architecture**: Circuit design, VLSI logic, digital/analog layouts, and processor architecture.
+2. 🏭 **Fabrication & Cleanroom Operations**: Wafer fab processes, lithography, thin films, and advanced packaging.
+3. 💻 **Embedded & RTOS Firmware**: Embedded C/C++, microcontrollers, real-time operating systems, and hardware-software integration.
+4. 🧠 **GPU & AI Acceleration**: GPU parallel programming (CUDA/HIP), neural network acceleration, and hardware-AI co-design.
 
 ---
 
@@ -35,12 +36,13 @@ The **NTU Semiconductor Club** is an interdisciplinary student organization at *
 
 ---
 
-### 🔬 Core Initiatives & Pillars
+### 📰 Semicon Bulletin AY2025/26 Semester 2 Highlights
 
-* 🏭 **Industry Site Visits**: Guided tours of commercial foundries and research labs (GlobalFoundries, AMD, A*STAR IME, N2FC).
-* 🛠️ **Full-Stack Technical Workshops**: Hands-on series covering IC design, cleanroom fab steps, embedded microcontrollers, and GPU CUDA programming.
-* 🤝 **Interdisciplinary Network**: Connecting students from Electrical Engineering, Computer Engineering, Computer Science, Materials Engineering, and Physics.
-* 💼 **Career Seminars**: Industry panel discussions, internship placements, and mentorship with hardware & software engineers.
+* ✈️ **Networking Coffee Chat** (*2 April 2026*): Small-group student-industry mentoring and open feedback exchange.
+* 🧪 **A*STAR IME Visit** (*27 March 2026*): R&D deep dive into microelectronics trends, advanced packaging, and photonics labs.
+* 💻 **AMD Industry Visit** (*25 February 2026*): Observed chip testing, SLT, final test, failure analysis, and product bring-up at AMD Singapore.
+* 🔬 **N2FC Cleanroom Fab Tours** (*26 Jan & 23 Feb 2026*): Back-to-back cleanroom visits observing wafer lithography equipment at N2FC.
+* 🧠 **AI Career Launch Pad** (*22 January 2026*): Session with **AI Singapore (AISG)** bridging hardware engineering and AI careers.
 
 ---
 
@@ -48,16 +50,16 @@ The **NTU Semiconductor Club** is an interdisciplinary student organization at *
 
 | Name | Role | Focus Area |
 | :--- | :--- | :--- |
-| **Ray** | President | Overall Direction & External Alignment |
+| **Ray** | President | Overall Direction, External Alignment & Full-Stack Strategy |
 | **Rishabh** | Vice President (Internal) | Operations, Membership & Student Engagement |
 | **Roland** | Vice President (External) | Corporate Partnerships & Industry Relations |
-| **Bryan** | Events Lead | Site Visits & Workshop Organization |
-| **Pranav** | Business Development Lead | Corporate Outreach & Sponsorships |
-| **Srishti** | Publicity Lead | Media, Outreach & Branding |
+| **Bryan** | Events Lead | Site Visits, Cleanroom Tours & Workshop Planning |
+| **Pranav** | Business Development Lead | Corporate Outreach, Sponsorships & Partner Growth |
+| **Srishti** | Publicity Lead | Media Branding, Social Channels & Member Outreach |
 
 ---
 
-### 📬 Connect & Community Channels
+### 📬 Official Channels
 
 * ✈️ **Telegram Group**: [Join NTU Semiconductor Club Telegram](https://t.me/+Wsb5No5hvnxlMjRl)
 * 💼 **LinkedIn Page**: [Follow NTU Semiconductor Club on LinkedIn](https://www.linkedin.com/company/ntu-semiconductor-club/)
