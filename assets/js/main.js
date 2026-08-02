@@ -16,13 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener("click", function () {
       navMenu.classList.toggle("show");
+      const isOpen = navMenu.classList.contains("show");
+      mobileToggle.setAttribute("aria-expanded", isOpen.toString());
       const icon = mobileToggle.querySelector("i");
       if (icon) {
-        if (navMenu.classList.contains("show")) {
-          icon.className = "fas fa-times";
-        } else {
-          icon.className = "fas fa-bars";
-        }
+        icon.className = isOpen ? "fas fa-times" : "fas fa-bars";
       }
     });
   }

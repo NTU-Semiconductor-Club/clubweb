@@ -6,9 +6,10 @@
   <title>Events & Bulletin | NTU Semiconductor Club</title>
   <meta name="description" content="Semicon Bulletin AY2025/26 Semester 2 edition: A*STAR IME visit, AMD Singapore tour, N2FC cleanroom tours, AISG career launchpad, and networking coffee chat.">
   
-  <meta property="og:title" content="Events | NTU Semiconductor Club">
+  <meta property="og:title" content="Events & Bulletin | NTU Semiconductor Club">
   <meta property="og:description" content="Full-stack semiconductor events, cleanroom tours, and industry visits at NTU.">
   <meta property="og:image" content="images/workshop1.jpg">
+  <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
@@ -35,7 +36,7 @@
           </div>
         </a>
 
-        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -53,8 +54,8 @@
     <header class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1>Semicon Bulletin & Event Highlights</h1>
-          <p>AY2025/26 Semester 2 Edition — Explore our recent industrial visits, cleanroom tours, AI career launchpad, and networking events.</p>
+          <h1>Club Events</h1>
+          <p>Workshops, site visits, cleanroom tours, and networking from AY2025/26 Semester 2.</p>
         </div>
       </div>
     </header>
@@ -64,7 +65,7 @@
       <section class="section">
         <div class="section-header">
           <h2>Technical Workshop Series</h2>
-          <p>Practical hands-on training from transistor theory to GPU code.</p>
+          <p>Workshops on chip design, microcontrollers, and CUDA programming.</p>
         </div>
 
         <div class="featured-event-card">
@@ -72,11 +73,11 @@
             <img src="images/workshop1.jpg" alt="Semiconductor Technical Workshop" loading="lazy">
           </div>
           <div class="featured-event-body">
-            <h3>Full-Stack Semiconductor Workshop Series</h3>
+            <h3>Upcoming Workshop Series</h3>
             <p>
-              Hands-on workshops covering IC design fundamentals, wafer fabrication steps, embedded systems programming, and CUDA GPU acceleration for AI workloads.
+              A hands-on workshop series covering IC design basics, fabrication flows, embedded programming, and CUDA GPU acceleration for AI applications.
             </p>
-            <a href="join.html" class="btn" style="align-self: flex-start;">Register Interest</a>
+            <a href="join.html" class="btn u-align-self-start">Register Interest</a>
           </div>
         </div>
       </section>
@@ -88,17 +89,17 @@
           <p>Highlights from our AY2025/26 Semester 2 industry visits and fab tours.</p>
         </div>
 
-        <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+        <div class="grid">
           <!-- A*STAR IME -->
           <div class="event-card">
             <div class="event-card-img-wrapper">
               <img src="images/ime.jpg" alt="A*STAR IME Industry Visit" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div style="font-size: 0.82rem; font-weight: 600; color: var(--meta-blue); margin-bottom: 4px;">27 MARCH 2026</div>
+              <div class="event-date">27 MARCH 2026</div>
               <h3>A*STAR IME Industry Visit</h3>
               <p>
-                A deep dive into semiconductor R&D at A*STAR Institute of Microelectronics. Industry experts shared insights on advanced packaging and photonics, followed by guided tours of the photonics lab and packaging facilities.
+                Visited A*STAR IME to learn about advanced packaging and silicon photonics. The tour covered their photonics lab and packaging research facilities.
               </p>
             </div>
           </div>
@@ -109,7 +110,7 @@
               <img src="images/amd.jpg" alt="AMD Industry Visit" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div style="font-size: 0.82rem; font-weight: 600; color: var(--meta-blue); margin-bottom: 4px;">25 FEBRUARY 2026</div>
+              <div class="event-date">25 FEBRUARY 2026</div>
               <h3>AMD Industry Visit</h3>
               <p>
                 Students visited AMD Singapore to observe real-world chip testing and bring-up. The tour covered System Level Test (SLT), Final Test, Failure Analysis, and AMD's CPU, GPU, and datacenter accelerator portfolio.
@@ -123,10 +124,10 @@
               <img src="images/n2fc.jpg" alt="N2FC Fab Tour" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div style="font-size: 0.82rem; font-weight: 600; color: var(--meta-blue); margin-bottom: 4px;">26 JAN & 23 FEB 2026</div>
+              <div class="event-date">26 JAN & 23 FEB 2026</div>
               <h3>N2FC Fab Tour</h3>
               <p>
-                Hosted two back-to-back cleanroom visits to the Nanyang NanoFabrication Centre (N2FC). Students gained first-hand exposure to cleanroom protocols, lithography tools, and processing equipment that transform wafers into chips.
+                Hosted two back-to-back cleanroom visits to the Nanyang NanoFabrication Centre (N2FC). Members toured the N2FC cleanroom and saw photolithography machines and wafer processing tools in action.
               </p>
             </div>
           </div>
@@ -137,7 +138,6 @@
               <img src="images/globalfoundries.jpg" alt="GlobalFoundries Visit" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div style="font-size: 0.82rem; font-weight: 600; color: var(--meta-blue); margin-bottom: 4px;">PAST VISIT</div>
               <h3>GlobalFoundries Visit</h3>
               <p>
                 Students toured commercial wafer fab facilities, observing silicon manufacturing operations, foundry engineering roles, and yield analysis in high-volume production.
@@ -160,10 +160,10 @@
               <img src="images/networking.jpg" alt="Networking Coffee Chat" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div style="font-size: 0.82rem; font-weight: 600; color: var(--meta-blue); margin-bottom: 4px;">2 APRIL 2026</div>
+              <div class="event-date">2 APRIL 2026</div>
               <h3>Networking Coffee Chat</h3>
               <p>
-                An open exchange featuring small-group chats where club members shared industry insights, gathered feedback for future events, and built peer connections with students interested in semiconductors.
+                An informal coffee chat where members discussed internships, career paths in semiconductors, and upcoming club plans.
               </p>
             </div>
           </div>
@@ -174,7 +174,7 @@
               <img src="images/career.jpg" alt="AI Career Launch Pad" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div style="font-size: 0.82rem; font-weight: 600; color: var(--meta-blue); margin-bottom: 4px;">22 JANUARY 2026</div>
+              <div class="event-date">22 JANUARY 2026</div>
               <h3>AI Career Launch Pad (with AI Singapore)</h3>
               <p>
                 Partnered with AI Singapore (AISG) to demonstrate how hardware and systems knowledge translates into AI careers. Students were introduced to the AIIP and AIAP apprenticeship programs.
@@ -193,9 +193,9 @@
           <span>NTU Semiconductor Club</span>
         </div>
         <div class="footer-links">
-          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;"><i class="fa-brands fa-telegram" style="color: #24A1DE;"></i> Telegram</a>
-          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;"><i class="fa-brands fa-linkedin" style="color: #0A66C2;"></i> LinkedIn</a>
-          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;"><i class="fa-regular fa-envelope"></i> Email</a>
+          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-telegram icon-telegram"></i> Telegram</a>
+          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-linkedin icon-linkedin"></i> LinkedIn</a>
+          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm"><i class="fa-regular fa-envelope"></i> Email</a>
         </div>
         <div class="footer-copy">
           &copy; 2026 NTU Semiconductor Club. Nanyang Technological University, Singapore.

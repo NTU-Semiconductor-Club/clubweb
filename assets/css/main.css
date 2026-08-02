@@ -55,6 +55,7 @@ body {
   font-family: var(--font-system);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -347,11 +348,7 @@ header.hero {
   gap: 20px;
 }
 
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+
 
 .card {
   background: var(--meta-surface);
@@ -615,6 +612,67 @@ footer {
   text-align: center;
 }
 
+/* ==================== SMALL BUTTON VARIANT ==================== */
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.82rem;
+}
+
+/* ==================== EVENT DATE BADGE ==================== */
+.event-date {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--meta-blue);
+  margin-bottom: 4px;
+}
+
+/* ==================== CTA BANNER CARD ==================== */
+.cta-card {
+  text-align: center;
+  padding: 36px 24px;
+}
+
+.cta-card h2 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.cta-card p {
+  max-width: 540px;
+  margin: 0 auto 20px auto;
+}
+
+.cta-card-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== STEP NUMBER BADGES ==================== */
+.step-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--meta-blue);
+  margin-bottom: 8px;
+}
+
+/* ==================== BRAND ICON COLORS ==================== */
+.icon-telegram { color: #24A1DE; }
+.icon-linkedin { color: #0A66C2; }
+
+/* ==================== UTILITIES ==================== */
+.u-text-center { text-align: center; }
+.u-text-blue { color: var(--meta-blue); }
+.u-text-secondary { color: var(--meta-text-secondary); }
+.u-text-underline { text-decoration: underline; }
+.u-max-width-600 { max-width: 600px; margin: 0 auto; }
+.u-margin-top-md { margin-top: 16px; }
+.u-margin-right-sm { margin-right: 6px; }
+.u-align-self-start { align-self: flex-start; }
+.u-padding-top-0 { padding-top: 0; }
+
 /* ==================== MOBILE & RESPONSIVE BREAKPOINTS ==================== */
 @media (max-width: 900px) {
   .hero-container:has(.hero-media) {
@@ -631,7 +689,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .grid-3, .grid-4 {
+  .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -713,7 +771,7 @@ footer {
     padding: 24px 16px 8px 16px;
   }
 
-  .grid, .grid-3, .grid-4, .stats-row {
+  .grid, .grid-3, .stats-row {
     grid-template-columns: 1fr;
     gap: 14px;
   }
