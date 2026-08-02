@@ -1,6 +1,28 @@
-# Architecture & Developer Guide 🛠️
+# Architecture & Brand Design Guide 🛠️
 
-Welcome to the **NTU Semiconductor Club Website** developer and architecture guide. This document provides a complete visual map, design system token reference, and guide for human developers and AI coding assistants ("vibecoders") to rapidly modify, extend, and maintain the website.
+Welcome to the **NTU Semiconductor Club Website** developer architecture and brand design guide. This document serves as the authoritative single-source-of-truth specification for human developers and AI coding assistants.
+
+---
+
+## 📐 Brand Identity & Header Specification
+
+All pages **must** strictly use the exact single-source-of-truth header branding markup:
+
+```html
+<a href="index.html" class="nav-brand">
+  <img src="images/logo.png" alt="NTU Semiconductor Club Logo" class="nav-brand-img">
+  <div class="nav-brand-text">
+    <span class="nav-brand-title">NTU Semiconductor Club</span>
+    <span class="nav-brand-sub">Nanyang Technological University</span>
+  </div>
+</a>
+```
+
+### Brand Tokens Standard
+
+* **Club Name (`.nav-brand-title`)**: `NTU Semiconductor Club` *(Title case, exact string)*
+* **Sub-Brand Badge (`.nav-brand-sub`)**: `Nanyang Technological University` *(Uppercase blue subtitle, exact string)*
+* **Logo Asset (`.nav-brand-img`)**: [`images/logo.png`](file:///home/ray/dev/clubweb/images/logo.png) *(Height: 44px, drop shadow elevation)*
 
 ---
 
@@ -10,13 +32,13 @@ Welcome to the **NTU Semiconductor Club Website** developer and architecture gui
 graph TD
     subgraph Browser ["Client Browser"]
         HTML["HTML Pages<br>(index, about, events, committee, join)"]
-        CSS["Design System<br>(assets/css/main.css)"]
+        CSS["Meta Design System<br>(assets/css/main.css)"]
         JS["Interactive Scripts<br>(assets/js/main.js)"]
         Media["Asset Gallery<br>(images/ & logo.png)"]
     end
 
     subgraph CDN ["Content & Font Delivery"]
-        GF["Google Fonts<br>(Plus Jakarta Sans & Inter)"]
+        GF["System Fonts<br>(-apple-system, Segoe UI, Roboto)"]
         FA["FontAwesome 6<br>(CDN Icons)"]
     end
 
@@ -38,59 +60,36 @@ graph TD
 
 ---
 
-## 📁 Workspace Map
+## 🎨 Meta Design System Tokens
 
-```text
-.
-├── index.html              # Landing page (Hero, Impact Stats, Focus Areas, Featured Visits)
-├── about.html              # About page (Purpose, Full-Stack Vision, Learning Pillars)
-├── events.html             # Events & Activities (Upcoming Workshop, Site Visits, GPU/AI Sessions)
-├── committee.html          # Leadership Team (Executive Committee & Portfolio Leads)
-├── join.html               # Combined Join & Contact Us page (Telegram, LinkedIn, Email, GitHub)
-├── .nojekyll               # Bypasses Jekyll build processing on GitHub Pages
-├── robots.txt              # Search engine crawler directives
-├── sitemap.xml             # XML Sitemap for SEO indexing
-├── README.md               # Project overview and quickstart guide
-├── ARCHITECTURE.md         # Architecture diagrams, design tokens, and developer guidelines
-├── CONTRIBUTING.md         # Vibe coding conventions & AI assistant rules
-├── PROFILE_README.md       # GitHub Organization Profile README template
-├── assets/
-│   ├── css/
-│   │   └── main.css        # Unified Design System CSS
-│   └── js/
-│       └── main.js         # Interactive scripts (Sticky nav, active links, mobile drawer)
-└── images/                 # Optimized website image assets
-    ├── logo.png            # Official NTU Semiconductor Club Lion Logo
-    └── committee/          # Committee member headshots
+All visual styles are centralized in [`assets/css/main.css`](file:///home/ray/dev/clubweb/assets/css/main.css) using Meta's design system tokens:
+
+```css
+:root {
+  --meta-blue: #0866ff;
+  --meta-blue-hover: #0052cc;
+  --meta-bg: #f0f2f5;
+  --meta-surface: #ffffff;
+  --meta-surface-subtle: #f7f8fa;
+  --meta-text-primary: #050505;
+  --meta-text-secondary: #65676b;
+  --meta-text-muted: #8a8d91;
+  --meta-border: #e4e6eb;
+  --meta-divider: #ced0d4;
+  --meta-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --meta-radius-sm: 6px;
+  --meta-radius-md: 8px;
+  --meta-radius-lg: 12px;
+}
 ```
 
 ---
 
 ## 📬 Official Contact & Community Channels Reference
 
-| Channel | URL | Purpose |
+| Channel | URL / Contact | Purpose |
 | :--- | :--- | :--- |
 | **Telegram Group** | [`https://t.me/+Wsb5No5hvnxlMjRl`](https://t.me/+Wsb5No5hvnxlMjRl) | Real-time member announcements & community chat |
 | **LinkedIn Page** | [`https://www.linkedin.com/company/ntu-semiconductor-club/`](https://www.linkedin.com/company/ntu-semiconductor-club/) | Professional updates, company news, and networking |
 | **Official Email** | [`mailto:ntu.semiconductor.club@ntu.edu.sg`](mailto:ntu.semiconductor.club@ntu.edu.sg) | Executive committee contact & corporate partnerships |
 | **GitHub Org** | [`https://github.com/NTU-Semiconductor-Club`](https://github.com/NTU-Semiconductor-Club) | Open source code, repositories, and documentation |
-
----
-
-## 🎨 Design System Tokens Reference
-
-All visual styles are centralized in [`assets/css/main.css`](file:///home/ray/dev/clubweb/assets/css/main.css) using native CSS custom properties (`:root`).
-
-```css
-:root {
-  --bg-primary: #070e1c;
-  --bg-secondary: #0c182e;
-  --bg-card: #0f1f3d;
-  --bg-card-hover: #14274c;
-  --brand-blue: #0b57d0;
-  --brand-red: #d93025;
-  --text-main: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --border-light: rgba(255, 255, 255, 0.08);
-}
-```
