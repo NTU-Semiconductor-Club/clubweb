@@ -1,4 +1,4 @@
-/* Meta / Facebook Design System (Clean Responsive Layout) */
+/* Meta / Facebook Design System (100% Pixel-Perfect Alignment) */
 :root {
   --meta-blue: #0866ff;
   --meta-blue-hover: #0052cc;
@@ -75,7 +75,7 @@ img {
   background: var(--meta-bg);
 }
 
-/* ==================== NAVIGATION BAR (FULL WIDTH) ==================== */
+/* ==================== NAVIGATION BAR (FULL WIDTH & ALIGNED) ==================== */
 #nav {
   position: sticky;
   top: 0;
@@ -191,7 +191,7 @@ img {
   filter: brightness(0.95);
 }
 
-/* ==================== HERO / HEADER BANNER (FULL WIDTH) ==================== */
+/* ==================== HERO / HEADER BANNER (DYNAMIC LAYOUT) ==================== */
 header.hero {
   background: var(--meta-surface);
   border-bottom: 1px solid var(--meta-border);
@@ -203,6 +203,12 @@ header.hero {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2-Column layout when hero-media is present */
+.hero-container:has(.hero-media) {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 36px;
@@ -223,6 +229,7 @@ header.hero {
   color: var(--meta-text-secondary);
   margin: 0 0 24px 0;
   line-height: 1.6;
+  max-width: 800px;
 }
 
 .hero-actions {
@@ -241,7 +248,7 @@ header.hero {
   max-height: 340px;
 }
 
-/* ==================== SECTION CONTAINER ==================== */
+/* ==================== SECTION CONTAINER (EDGES ALIGNED) ==================== */
 .section {
   max-width: 1200px;
   width: 100%;
@@ -293,6 +300,8 @@ header.hero {
   border: 1px solid var(--meta-border);
   box-shadow: var(--meta-shadow);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -446,7 +455,7 @@ header.hero {
   font-weight: 600;
 }
 
-/* ==================== FOOTER (FULL WIDTH) ==================== */
+/* ==================== FOOTER (FULL WIDTH & PERFECTLY ALIGNED) ==================== */
 footer {
   background: var(--meta-surface);
   border-top: 1px solid var(--meta-border);
@@ -489,18 +498,18 @@ footer {
   text-align: center;
 }
 
-/* ==================== MOBILE RESPONSIVE RULES ==================== */
+/* ==================== MOBILE & TABLET RESPONSIVE RULES ==================== */
 @media (max-width: 900px) {
+  .hero-container:has(.hero-media) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .grid-3, .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
   .grid, .grid-3, .grid-4, .stats-row {
     grid-template-columns: 1fr;
   }
