@@ -1,4 +1,4 @@
-/* Meta / Facebook Design System (Mobile-Optimized & Prominent Logo) */
+/* Meta / Facebook Design System (100% Stable Header & Responsive Layout) */
 :root {
   --meta-blue: #0866ff;
   --meta-blue-hover: #0052cc;
@@ -75,7 +75,7 @@ img {
   background: var(--meta-bg);
 }
 
-/* ==================== NAVIGATION BAR & PROMINENT LOGO ==================== */
+/* ==================== NAVIGATION BAR (STABLE FULL WIDTH) ==================== */
 #nav {
   position: sticky;
   top: 0;
@@ -89,7 +89,7 @@ img {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  height: 68px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,14 +104,15 @@ img {
   font-size: 1.15rem;
   color: var(--meta-text-primary);
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 /* Prominent Club Logo */
 .nav-brand-img {
-  height: 48px;
+  height: 44px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
   transition: transform 0.2s ease;
 }
 
@@ -126,13 +127,13 @@ img {
 }
 
 .nav-brand-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--meta-text-primary);
 }
 
 .nav-brand-sub {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--meta-blue);
   text-transform: uppercase;
@@ -155,6 +156,7 @@ img {
   padding: 8px 16px;
   border-radius: var(--meta-radius-sm);
   transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
 }
 
 #nav a:hover {
@@ -178,9 +180,9 @@ img {
   background: var(--meta-surface-subtle);
   border: 1px solid var(--meta-border);
   color: var(--meta-text-primary);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: var(--meta-radius-sm);
   transition: background 0.15s ease;
 }
@@ -204,6 +206,7 @@ img {
   border: none;
   cursor: pointer;
   transition: background 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -223,7 +226,7 @@ img {
   filter: brightness(0.95);
 }
 
-/* ==================== HERO BANNER ==================== */
+/* ==================== HERO BANNER (ROBUST FULL-WIDTH & ALIGNED) ==================== */
 header.hero {
   background: var(--meta-surface);
   border-bottom: 1px solid var(--meta-border);
@@ -237,8 +240,10 @@ header.hero {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
+/* 2-Column Grid Layout when hero-media is present */
 .hero-container:has(.hero-media) {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -246,24 +251,8 @@ header.hero {
   align-items: center;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(8, 102, 255, 0.08);
-  border: 1px solid rgba(8, 102, 255, 0.2);
-  color: var(--meta-blue);
-  font-weight: 700;
-  font-size: 0.8rem;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  margin-bottom: 16px;
-  width: fit-content;
-}
-
-.hero-badge-logo {
-  height: 18px;
-  width: auto;
+.hero-content {
+  width: 100%;
 }
 
 .hero-content h1 {
@@ -280,7 +269,7 @@ header.hero {
   color: var(--meta-text-secondary);
   margin: 0 0 24px 0;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .hero-actions {
@@ -554,7 +543,7 @@ footer {
   text-align: center;
 }
 
-/* ==================== MOBILE & TABLET UX OPTIMIZATION ==================== */
+/* ==================== MOBILE & RESPONSIVE BREAKPOINTS ==================== */
 @media (max-width: 900px) {
   .hero-container:has(.hero-media) {
     grid-template-columns: 1fr;
@@ -562,6 +551,41 @@ footer {
   }
   .grid-3, .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  #nav ul {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: var(--meta-surface);
+    border-bottom: 1px solid var(--meta-border);
+    flex-direction: column;
+    padding: 12px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  #nav ul.show {
+    display: flex;
+  }
+
+  #nav ul li {
+    width: 100%;
+  }
+
+  #nav a {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border-radius: var(--meta-radius-sm);
   }
 }
 
@@ -576,7 +600,7 @@ footer {
   }
   
   .nav-brand-title {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
   
   .nav-brand-sub {
@@ -584,7 +608,7 @@ footer {
   }
 
   header.hero {
-    padding: 28px 0;
+    padding: 24px 0;
   }
 
   .hero-container {
@@ -611,39 +635,6 @@ footer {
 
   .event-card-img-wrapper {
     height: 160px;
-  }
-
-  .mobile-toggle {
-    display: block;
-  }
-
-  #nav ul {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: var(--meta-surface);
-    border-bottom: 1px solid var(--meta-border);
-    flex-direction: column;
-    padding: 12px 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  }
-
-  #nav ul.show {
-    display: flex;
-  }
-
-  #nav ul li {
-    width: 100%;
-  }
-
-  #nav a {
-    display: block;
-    width: 100%;
-    padding: 12px 16px;
-    font-size: 0.95rem;
-    border-radius: var(--meta-radius-sm);
   }
 
   .footer-container {
