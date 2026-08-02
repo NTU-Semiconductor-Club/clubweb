@@ -738,12 +738,18 @@ footer {
     padding: 0 16px;
   }
   
+  .nav-brand {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  
   .nav-brand-img {
     height: 38px;
   }
   
   .nav-brand-title {
     font-size: 0.95rem;
+    white-space: normal;
   }
   
   .nav-brand-sub {
@@ -791,5 +797,14 @@ footer {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-brand-sub {
+    display: none;
+  }
+  .nav-brand-img {
+    height: 32px;
   }
 }
