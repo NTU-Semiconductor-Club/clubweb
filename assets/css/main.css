@@ -104,6 +104,18 @@ img {
   color: var(--text-main);
 }
 
+.nav-brand-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.nav-brand:hover .nav-brand-img {
+  transform: scale(1.05);
+}
+
 .nav-brand span {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
