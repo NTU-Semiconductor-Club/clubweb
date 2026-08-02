@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ntu-semiconductor-club.github.io/clubweb/sitemap.xml

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ntu-semiconductor-club.github.io/clubweb/index.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://ntu-semiconductor-club.github.io/clubweb/about.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ntu-semiconductor-club.github.io/clubweb/events.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ntu-semiconductor-club.github.io/clubweb/committee.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ntu-semiconductor-club.github.io/clubweb/join.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
