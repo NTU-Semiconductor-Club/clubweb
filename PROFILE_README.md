@@ -7,8 +7,9 @@
   
   <p>
     <a href="https://ntu-semiconductor-club.github.io/clubweb"><b>Official Website</b></a> •
-    <a href="mailto:ntu.semiconductor.club@ntu.edu.sg"><b>Contact Us</b></a> •
-    <a href="https://ntu-semiconductor-club.github.io/clubweb/join.html"><b>Join Membership</b></a>
+    <a href="https://t.me/+Wsb5No5hvnxlMjRl"><b>Telegram Group</b></a> •
+    <a href="https://www.linkedin.com/company/ntu-semiconductor-club/"><b>LinkedIn Page</b></a> •
+    <a href="mailto:ntu.semiconductor.club@ntu.edu.sg"><b>Contact Us</b></a>
   </p>
 </div>
 
@@ -56,8 +57,10 @@ The **NTU Semiconductor Club** is an interdisciplinary student organization at *
 
 ---
 
-### 📬 Connect & Join
+### 📬 Connect & Community Channels
 
+* ✈️ **Telegram Group**: [Join NTU Semiconductor Club Telegram](https://t.me/+Wsb5No5hvnxlMjRl)
+* 💼 **LinkedIn Page**: [Follow NTU Semiconductor Club on LinkedIn](https://www.linkedin.com/company/ntu-semiconductor-club/)
 * 🌐 **Official Website**: [NTU Semiconductor Club Portal](https://ntu-semiconductor-club.github.io/clubweb)
 * 📧 **Email**: [ntu.semiconductor.club@ntu.edu.sg](mailto:ntu.semiconductor.club@ntu.edu.sg)
 * 📍 **Location**: Nanyang Technological University (NTU), 50 Nanyang Ave, Singapore 639798
