@@ -19,6 +19,10 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Theme Initializer (Prevents FOUC) -->
+  <script>
+    (function(){const t=localStorage.getItem('clubweb-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+  </script>
 </head>
 
 <body>
@@ -36,9 +40,19 @@
           </div>
         </a>
 
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="nav-search-btn" id="open-command-palette" aria-label="Open Command Palette (Cmd+K)">
+            <i class="fas fa-search"></i>
+            <span class="nav-search-text">Search</span>
+            <kbd class="nav-search-kbd">⌘K</kbd>
+          </button>
+          <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
 
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -92,21 +106,37 @@
           <div class="card">
             <h3>Industry Site Visits</h3>
             <p>Tours of AMD, GlobalFoundries, A*STAR IME, and N2FC facilities to see real chip manufacturing and testing.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag"><i class="fas fa-building u-margin-right-sm"></i> AMD & GlobalFoundries</span>
+              <span class="astryx-layer-tag">A*STAR IME</span>
+            </div>
           </div>
 
           <div class="card">
             <h3>Cleanroom Access</h3>
             <p>Hands-on cleanroom sessions at NTU N2FC covering photolithography, wafer processing, and metrology.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag"><i class="fas fa-mask u-margin-right-sm"></i> NTU N2FC</span>
+              <span class="astryx-layer-tag">Lithography & Metrology</span>
+            </div>
           </div>
 
           <div class="card">
             <h3>Technical Workshops</h3>
             <p>Practical sessions on EDA tools, embedded firmware, CUDA programming, and circuit design.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag"><i class="fas fa-code u-margin-right-sm"></i> CUDA GPU & AI</span>
+              <span class="astryx-layer-tag">EDA & Firmware</span>
+            </div>
           </div>
 
           <div class="card">
             <h3>Networking & Careers</h3>
             <p>Coffee chats, career panels, and connections with engineers from the semiconductor industry.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag"><i class="fas fa-handshake u-margin-right-sm"></i> AISG AIIP/AIAP</span>
+              <span class="astryx-layer-tag">Industry Mentorship</span>
+            </div>
           </div>
         </div>
       </section>

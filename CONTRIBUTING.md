@@ -9,7 +9,7 @@ Thank you for contributing to the **NTU Semiconductor Club Website**! This docum
 When prompted to edit, extend, or fix code in this repository:
 
 1. **Follow the `humanizer` Writing Style**:
-   * Do NOT use inflated AI marketing words (`vibrant`, `landscape`, `pivotal`, `testament`, `fostering`, `delve`, `unmatched`).
+   * Do NOT use inflated AI marketing words (`vibrant`, `landscape`, `pivotal`, `testament`, `fostering`, `delve`, `unmatched`, `beacon`, `tapestry`, `spearheaded`, `empowering`, `supercharge`, `synergy`).
    * Keep text factual, concise, natural, and grounded in student club context.
    * Avoid overuse of rule-of-three phrasing or synthetic em dashes (`—`).
 
@@ -25,7 +25,7 @@ When prompted to edit, extend, or fix code in this repository:
 4. **Follow HTML Layout & Component Structure**:
    * Every HTML file must retain:
      - Navigation header (`#nav` with `.nav-brand`, mobile menu button, and `.active` class on current page link).
-     - Global footer with official lion logo [`images/logo.png`](file:///home/ray/dev/clubweb/images/logo.png) and contact email.
+     - Global footer with official lion logo [`images/logo.png`](file:///Users/ray/dev/clubweb/images/logo.png) and contact email.
      - Script tag `<script src="assets/js/main.js"></script>` before `</body>`.
 
 ---
@@ -46,4 +46,4 @@ When prompted to edit, extend, or fix code in this repository:
    ```
 
 3. **Deployment**:
-   Pushing to `main` automatically triggers the GitHub Actions workflow [`.github/workflows/deploy.yml`](file:///home/ray/dev/clubweb/.github/workflows/deploy.yml) to deploy to GitHub Pages.
+   Pushing to `main` automatically triggers the GitHub Actions workflow [`.github/workflows/deploy.yml`](file:///Users/ray/dev/clubweb/.github/workflows/deploy.yml) to deploy to GitHub Pages.

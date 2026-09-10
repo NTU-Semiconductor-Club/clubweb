@@ -19,6 +19,10 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Theme Initializer (Prevents FOUC) -->
+  <script>
+    (function(){const t=localStorage.getItem('clubweb-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+  </script>
 </head>
 
 <body>
@@ -36,9 +40,19 @@
           </div>
         </a>
 
-        <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="nav-search-btn" id="open-command-palette" aria-label="Open Command Palette (Cmd+K)">
+            <i class="fas fa-search"></i>
+            <span class="nav-search-text">Search</span>
+            <kbd class="nav-search-kbd">⌘K</kbd>
+          </button>
+          <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
 
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -171,6 +185,76 @@
             <div class="step-number">3</div>
             <h3>Attend Workshops</h3>
             <p>Participate in foundry site visits, technical workshops, and club social events.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frequently Asked Questions (Astryx Accordion) -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about membership, events, and participation.</p>
+        </div>
+
+        <div class="astryx-accordion">
+          <div class="astryx-accordion-item">
+            <button class="astryx-accordion-trigger" aria-expanded="false">
+              <span>Do I need prior IC design or cleanroom experience to join?</span>
+              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+            </button>
+            <div class="astryx-accordion-panel">
+              <div class="astryx-accordion-content">
+                No prior background is required. Our beginner workshops introduce circuit fundamentals, EDA tools, and cleanroom protocols step-by-step from first principles.
+              </div>
+            </div>
+          </div>
+
+          <div class="astryx-accordion-item">
+            <button class="astryx-accordion-trigger" aria-expanded="false">
+              <span>Are foundry visits and cleanroom tours free for members?</span>
+              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+            </button>
+            <div class="astryx-accordion-panel">
+              <div class="astryx-accordion-content">
+                Yes! All club-organized visits to AMD, GlobalFoundries, A*STAR IME, and NTU N2FC cleanroom tours are completely free for registered members. Spots are allocated via Telegram registration polls due to facility limits.
+              </div>
+            </div>
+          </div>
+
+          <div class="astryx-accordion-item">
+            <button class="astryx-accordion-trigger" aria-expanded="false">
+              <span>Can students from outside engineering (SCSE / MSE / Physics / Business) join?</span>
+              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+            </button>
+            <div class="astryx-accordion-panel">
+              <div class="astryx-accordion-content">
+                Yes, our club is multidisciplinary. Semiconductor technology spans computing systems (SCSE), materials science (MSE), device physics (SPMS), and supply chain management (NBS). All NTU students are welcome.
+              </div>
+            </div>
+          </div>
+
+          <div class="astryx-accordion-item">
+            <button class="astryx-accordion-trigger" aria-expanded="false">
+              <span>How do I participate in CUDA GPU programming and AI hardware projects?</span>
+              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+            </button>
+            <div class="astryx-accordion-panel">
+              <div class="astryx-accordion-content">
+                We partner with AI Singapore (AISG) and run hands-on CUDA workshops for hardware-accelerated deep learning. Workshop schedules and repository links are shared directly in our Telegram group.
+              </div>
+            </div>
+          </div>
+
+          <div class="astryx-accordion-item">
+            <button class="astryx-accordion-trigger" aria-expanded="false">
+              <span>How can I join the executive committee or become a student lead?</span>
+              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+            </button>
+            <div class="astryx-accordion-panel">
+              <div class="astryx-accordion-content">
+                Executive committee recruitment opens at the beginning of each academic semester. Active members who organize events or lead workshops can apply for portfolio lead roles.
+              </div>
+            </div>
           </div>
         </div>
       </section>

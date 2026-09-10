@@ -17,7 +17,7 @@
 
 ### ⚡ Our "Full-Stack" Vision
 
-The **NTU Semiconductor Club** is an interdisciplinary student organization at **Nanyang Technological University (NTU), Singapore**. Our mission is to educate and empower students across the **complete semiconductor value chain**:
+The **NTU Semiconductor Club** is an interdisciplinary student organization at **Nanyang Technological University (NTU), Singapore**. Our mission is to educate and equip students across the **complete semiconductor value chain**:
 
 1. 🎨 **IC Design & Architecture**: Circuit design, VLSI logic, digital/analog layouts, and processor architecture.
 2. 🏭 **Fabrication & Cleanroom Operations**: Wafer fab processes, lithography, thin films, and advanced packaging.
@@ -39,7 +39,7 @@ The **NTU Semiconductor Club** is an interdisciplinary student organization at *
 ### 📰 Semicon Bulletin AY2025/26 Semester 2 Highlights
 
 * ✈️ **Networking Coffee Chat** (*2 April 2026*): Small-group student-industry mentoring and open feedback exchange.
-* 🧪 **A*STAR IME Visit** (*27 March 2026*): R&D deep dive into microelectronics trends, advanced packaging, and photonics labs.
+* 🧪 **A*STAR IME Visit** (*27 March 2026*): Technical session exploring microelectronics trends, advanced packaging, and photonics labs.
 * 💻 **AMD Industry Visit** (*25 February 2026*): Observed chip testing, SLT, final test, failure analysis, and product bring-up at AMD Singapore.
 * 🔬 **N2FC Cleanroom Fab Tours** (*26 Jan & 23 Feb 2026*): Back-to-back cleanroom visits observing wafer lithography equipment at N2FC.
 * 🧠 **AI Career Launch Pad** (*22 January 2026*): Session with **AI Singapore (AISG)** bridging hardware engineering and AI careers.

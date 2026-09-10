@@ -19,6 +19,10 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Theme Initializer (Prevents FOUC) -->
+  <script>
+    (function(){const t=localStorage.getItem('clubweb-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+  </script>
 </head>
 
 <body>
@@ -36,9 +40,19 @@
           </div>
         </a>
 
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="nav-search-btn" id="open-command-palette" aria-label="Open Command Palette (Cmd+K)">
+            <i class="fas fa-search"></i>
+            <span class="nav-search-text">Search</span>
+            <kbd class="nav-search-kbd">⌘K</kbd>
+          </button>
+          <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
 
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -54,6 +68,10 @@
     <header class="hero">
       <div class="hero-container">
         <div class="hero-content">
+          <div class="astryx-status-pill">
+            <span class="astryx-pulse-dot"></span>
+            <span>AY2025/26 Semester 2 &bull; Active Community</span>
+          </div>
           <h1>NTU Semiconductor Club</h1>
           <p>A student community at NTU exploring chip design, cleanroom fabrication, embedded systems, and GPU programming through workshops, industry visits, and projects.</p>
           <div class="hero-actions">
@@ -97,21 +115,37 @@
           <div class="card">
             <h3>Chip Design & VLSI</h3>
             <p>Learn digital logic, analog circuits, and the EDA tools used in real chip design.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag">Digital Logic</span>
+              <span class="astryx-layer-tag">EDA Tools</span>
+            </div>
           </div>
 
           <div class="card">
             <h3>Fabrication & Packaging</h3>
             <p>Visit cleanrooms and understand wafer fabrication, photolithography, and packaging.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag">N2FC Cleanroom</span>
+              <span class="astryx-layer-tag">Photolithography</span>
+            </div>
           </div>
 
           <div class="card">
             <h3>Embedded Systems & Firmware</h3>
             <p>Write C/C++ firmware for microcontrollers and hardware interfaces.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag">Microcontrollers</span>
+              <span class="astryx-layer-tag">Embedded C/C++</span>
+            </div>
           </div>
 
           <div class="card">
             <h3>GPU & AI Programming</h3>
             <p>Write parallel CUDA code to accelerate neural networks and heavy workloads.</p>
+            <div class="astryx-layer-tags">
+              <span class="astryx-layer-tag">CUDA</span>
+              <span class="astryx-layer-tag">AI Singapore (AISG)</span>
+            </div>
           </div>
         </div>
       </section>
@@ -131,6 +165,10 @@
             <div class="event-card-body">
               <h3>GlobalFoundries Visit</h3>
               <p>Toured commercial wafer fabrication lines and observed cleanroom manufacturing operations.</p>
+              <div class="astryx-layer-tags">
+                <span class="astryx-layer-tag"><i class="fas fa-industry u-margin-right-sm"></i> Commercial Fab Line</span>
+                <span class="astryx-layer-tag">Cleanroom Ops</span>
+              </div>
             </div>
           </div>
 
@@ -141,6 +179,10 @@
             <div class="event-card-body">
               <h3>AMD Industry Visit</h3>
               <p>Explored high-performance computing, processor architecture, and graphics hardware design.</p>
+              <div class="astryx-layer-tags">
+                <span class="astryx-layer-tag"><i class="fas fa-microchip u-margin-right-sm"></i> System Level Test (SLT)</span>
+                <span class="astryx-layer-tag">Failure Analysis</span>
+              </div>
             </div>
           </div>
 
@@ -151,6 +193,10 @@
             <div class="event-card-body">
               <h3>A*STAR IME Visit</h3>
               <p>Learnt about microelectronics research, MEMS technology, and advanced packaging.</p>
+              <div class="astryx-layer-tags">
+                <span class="astryx-layer-tag"><i class="fas fa-flask u-margin-right-sm"></i> Silicon Photonics</span>
+                <span class="astryx-layer-tag">Advanced Packaging</span>
+              </div>
             </div>
           </div>
         </div>
