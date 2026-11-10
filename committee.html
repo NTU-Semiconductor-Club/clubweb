@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Committee | NTU Semiconductor Club</title>
-  <meta name="description" content="Meet the student executive committee and portfolio leads of NTU Semiconductor Club.">
+  <meta name="description" content="Meet the student executive committee and portfolio directors of NTU Semiconductor Club.">
   
   <meta property="og:title" content="Committee | NTU Semiconductor Club">
   <meta property="og:description" content="Meet the student committee leading NTU Semiconductor Club.">
@@ -14,22 +14,20 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
-  <!-- Theme Initializer (Prevents FOUC) -->
-  <script>
-    (function(){const t=localStorage.getItem('clubweb-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
-  </script>
 </head>
 
 <body>
 
   <div id="wrapper">
 
-    <!-- Meta Header Bar -->
+    <!-- Navigation Bar -->
     <nav id="nav" role="navigation" aria-label="Main Navigation">
       <div class="nav-container">
         <a href="index.html" class="nav-brand">
@@ -40,17 +38,14 @@
           </div>
         </a>
 
-        <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="nav-actions">
           <button class="nav-search-btn" id="open-command-palette" aria-label="Open Command Palette (Cmd+K)">
-            <i class="fas fa-search"></i>
+            <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <span class="nav-search-text">Search</span>
             <kbd class="nav-search-kbd">⌘K</kbd>
           </button>
-          <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
           <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <i class="fas fa-bars"></i>
+            <svg class="xai-icon" width="16" height="16" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
         </div>
 
@@ -64,12 +59,13 @@
       </div>
     </nav>
 
-    <!-- Meta Header Banner -->
+    <!-- Hero Band -->
     <header class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1>Student Executive Committee</h1>
-          <p>The student team running NTU Semiconductor Club — organising events, coordinating industry visits, and managing operations.</p>
+          <span class="eyebrow-mono">// AY2025/26 ADMINISTRATION</span>
+          <h1>Executive Committee</h1>
+          <p>Student engineering leads organizing foundry visits, cleanroom fab tours, curriculum design, and club operations.</p>
         </div>
       </div>
     </header>
@@ -77,212 +73,185 @@
     <main>
       <!-- Executive Committee -->
       <section class="section">
+        <span class="eyebrow-mono">// EXECUTIVE LEADERSHIP</span>
         <div class="section-header">
-          <h2>Executive Committee</h2>
+          <h2>Executive Officers</h2>
+          <p>Executive leadership steering technical curriculum, industry liaisons, and operations.</p>
         </div>
 
         <div class="grid-3">
           <div class="person-card">
-            <div class="person-card-banner"></div>
-            <img src="images/committee/president.jpg" alt="Ray - President" class="person-avatar" loading="lazy">
-            <h3>Ray</h3>
-            <strong>President</strong>
-            <p>Oversees club direction, partnerships, and event planning.</p>
-            <button class="astryx-trigger-btn" data-astryx-layer-target="layer-ray" aria-label="View Ray focus details">
-              <i class="fas fa-layer-group"></i> Focus Area
+            <div class="person-avatar">
+              <img src="images/committee/president.jpg" alt="Ray - President" loading="lazy">
+            </div>
+            <h3 class="person-name">Ray</h3>
+            <span class="person-role">PRESIDENT</span>
+            <p>Directs overall curriculum design, external partnerships, and hardware education initiatives.</p>
+            <button class="btn btn-secondary btn-sm" data-layer-target="layer-ray" aria-expanded="false">
+              Focus Area
             </button>
           </div>
 
           <div class="person-card">
-            <div class="person-card-banner"></div>
-            <img src="images/committee/rishabh.jpg" alt="Rishabh - Vice President (Internal)" class="person-avatar" loading="lazy">
-            <h3>Rishabh</h3>
-            <strong>Vice President (Internal)</strong>
-            <p>Manages internal logistics, member registration, and campus coordination.</p>
-            <button class="astryx-trigger-btn" data-astryx-layer-target="layer-rishabh" aria-label="View Rishabh focus details">
-              <i class="fas fa-layer-group"></i> Focus Area
+            <div class="person-avatar">
+              <img src="images/committee/rishabh.jpg" alt="Rishabh - Vice President (Internal)" loading="lazy">
+            </div>
+            <h3 class="person-name">Rishabh</h3>
+            <span class="person-role">VICE PRESIDENT (INTERNAL)</span>
+            <p>Supervises internal logistics, safety protocols, and student registration workflows.</p>
+            <button class="btn btn-secondary btn-sm" data-layer-target="layer-rishabh" aria-expanded="false">
+              Focus Area
             </button>
           </div>
 
           <div class="person-card">
-            <div class="person-card-banner"></div>
-            <img src="images/committee/roland.jpg" alt="Roland - Vice President (External)" class="person-avatar" loading="lazy">
-            <h3>Roland</h3>
-            <strong>Vice President (External)</strong>
-            <p>Coordinates company visits and industry partner relations.</p>
-            <button class="astryx-trigger-btn" data-astryx-layer-target="layer-roland" aria-label="View Roland focus details">
-              <i class="fas fa-layer-group"></i> Focus Area
+            <div class="person-avatar">
+              <img src="images/committee/roland.jpg" alt="Roland - Vice President (External)" loading="lazy">
+            </div>
+            <h3 class="person-name">Roland</h3>
+            <span class="person-role">VICE PRESIDENT (EXTERNAL)</span>
+            <p>Coordinates corporate relations and foundry expeditions with AMD, GlobalFoundries, and IME.</p>
+            <button class="btn btn-secondary btn-sm" data-layer-target="layer-roland" aria-expanded="false">
+              Focus Area
             </button>
           </div>
         </div>
       </section>
 
       <!-- Portfolio Leads -->
-      <section class="section">
+      <section class="section" style="padding-top: 0;">
+        <span class="eyebrow-mono">// PORTFOLIO DIRECTORS</span>
         <div class="section-header">
-          <h2>Portfolio Leads</h2>
+          <h2>Portfolio Directors</h2>
+          <p>Functional portfolio leads managing events, cleanroom labs, sponsorships, and publications.</p>
         </div>
 
         <div class="grid-3">
           <div class="person-card">
-            <div class="person-card-banner"></div>
-            <img src="images/committee/bryan.jpg" alt="Bryan - Events Lead" class="person-avatar" loading="lazy">
-            <h3>Bryan</h3>
-            <strong>Events Lead</strong>
-            <p>Plans and runs site visits, cleanroom tours, and workshops.</p>
-            <button class="astryx-trigger-btn" data-astryx-layer-target="layer-bryan" aria-label="View Bryan focus details">
-              <i class="fas fa-layer-group"></i> Focus Area
+            <div class="person-avatar">
+              <img src="images/committee/bryan.jpg" alt="Bryan - Events Lead" loading="lazy">
+            </div>
+            <h3 class="person-name">Bryan</h3>
+            <span class="person-role">EVENTS DIRECTOR</span>
+            <p>Coordinates fab visits, N2FC cleanroom sessions, and hands-on laboratory workshops.</p>
+            <button class="btn btn-secondary btn-sm" data-layer-target="layer-bryan" aria-expanded="false">
+              Focus Area
             </button>
           </div>
 
           <div class="person-card">
-            <div class="person-card-banner"></div>
-            <img src="images/committee/pranav.jpg" alt="Pranav - Sponsorships Lead" class="person-avatar" loading="lazy">
-            <h3>Pranav</h3>
-            <strong>Sponsorships Lead</strong>
-            <p>Connects with industry sponsors and coordinates company partnerships.</p>
-            <button class="astryx-trigger-btn" data-astryx-layer-target="layer-pranav" aria-label="View Pranav focus details">
-              <i class="fas fa-layer-group"></i> Focus Area
+            <div class="person-avatar">
+              <img src="images/committee/pranav.jpg" alt="Pranav - Sponsorships Lead" loading="lazy">
+            </div>
+            <h3 class="person-name">Pranav</h3>
+            <span class="person-role">SPONSORSHIPS DIRECTOR</span>
+            <p>Engages industry partners and corporate liaisons to support student projects and internships.</p>
+            <button class="btn btn-secondary btn-sm" data-layer-target="layer-pranav" aria-expanded="false">
+              Focus Area
             </button>
           </div>
 
           <div class="person-card">
-            <div class="person-card-banner"></div>
-            <img src="images/committee/srishti.jpg" alt="Srishti - Publicity Lead" class="person-avatar" loading="lazy">
-            <h3>Srishti</h3>
-            <strong>Publicity Lead</strong>
-            <p>Runs social media, designs publicity materials, and handles member comms.</p>
-            <button class="astryx-trigger-btn" data-astryx-layer-target="layer-srishti" aria-label="View Srishti focus details">
-              <i class="fas fa-layer-group"></i> Focus Area
+            <div class="person-avatar">
+              <img src="images/committee/srishti.jpg" alt="Srishti - Publicity Lead" loading="lazy">
+            </div>
+            <h3 class="person-name">Srishti</h3>
+            <span class="person-role">PUBLICITY DIRECTOR</span>
+            <p>Directs technical publications, the Semicon Bulletin, and official student channels.</p>
+            <button class="btn btn-secondary btn-sm" data-layer-target="layer-srishti" aria-expanded="false">
+              Focus Area
             </button>
           </div>
         </div>
       </section>
 
-      <!-- Astryx Floating Layers (core-layer--offset pattern) -->
-      <div id="layer-ray" class="astryx-layer">
-        <div class="astryx-layer-header">
-          <div>
-            <h4 class="astryx-layer-title">Ray</h4>
-            <span class="astryx-layer-badge">President</span>
-          </div>
-          <button class="astryx-layer-close" aria-label="Close details">&times;</button>
-        </div>
-        <div class="astryx-layer-body">
-          <p>Leads overall club direction, curriculum design, and external partnerships bridging NTU with AI Singapore (AISG) and semiconductor foundries.</p>
-          <div class="astryx-layer-tags">
-            <span class="astryx-layer-tag">IC Design</span>
-            <span class="astryx-layer-tag">CUDA GPU</span>
-            <span class="astryx-layer-tag">Full-Stack Vision</span>
-          </div>
+      <!-- Popover Layers (xAI Hairline Chrome) -->
+      <div id="layer-ray" class="popover-layer" role="tooltip">
+        <h4 class="popover-layer-title">Ray</h4>
+        <div class="popover-layer-role">PRESIDENT &bull; CURRICULUM LEAD</div>
+        <p>Directs club strategy, semiconductor curriculum architecture, and external partner relations with AI Singapore (AISG) and semiconductor foundries.</p>
+        <div class="tags-cluster" style="margin-top: 12px;">
+          <span class="tag-mono">IC DESIGN</span>
+          <span class="tag-mono">CUDA GPU</span>
+          <span class="tag-mono">CURRICULUM</span>
         </div>
       </div>
 
-      <div id="layer-rishabh" class="astryx-layer">
-        <div class="astryx-layer-header">
-          <div>
-            <h4 class="astryx-layer-title">Rishabh</h4>
-            <span class="astryx-layer-badge">VP Internal</span>
-          </div>
-          <button class="astryx-layer-close" aria-label="Close details">&times;</button>
-        </div>
-        <div class="astryx-layer-body">
-          <p>Supervises internal operations, registration workflows, safety protocol orientations, and cleanroom visit coordination.</p>
-          <div class="astryx-layer-tags">
-            <span class="astryx-layer-tag">Operations</span>
-            <span class="astryx-layer-tag">Cleanroom Safety</span>
-            <span class="astryx-layer-tag">Campus Logistics</span>
-          </div>
+      <div id="layer-rishabh" class="popover-layer" role="tooltip">
+        <h4 class="popover-layer-title">Rishabh</h4>
+        <div class="popover-layer-role">VP INTERNAL &bull; OPERATIONS</div>
+        <p>Manages internal operations, registration workflows, safety orientations, and cleanroom visit coordination.</p>
+        <div class="tags-cluster" style="margin-top: 12px;">
+          <span class="tag-mono">OPERATIONS</span>
+          <span class="tag-mono">CLEANROOM SAFETY</span>
+          <span class="tag-mono">LOGISTICS</span>
         </div>
       </div>
 
-      <div id="layer-roland" class="astryx-layer">
-        <div class="astryx-layer-header">
-          <div>
-            <h4 class="astryx-layer-title">Roland</h4>
-            <span class="astryx-layer-badge">VP External</span>
-          </div>
-          <button class="astryx-layer-close" aria-label="Close details">&times;</button>
-        </div>
-        <div class="astryx-layer-body">
-          <p>Manages corporate outreach and technical visits to semiconductor leaders including AMD, GlobalFoundries, and A*STAR IME.</p>
-          <div class="astryx-layer-tags">
-            <span class="astryx-layer-tag">Foundry Relations</span>
-            <span class="astryx-layer-tag">AMD & GF Tours</span>
-            <span class="astryx-layer-tag">Industry Network</span>
-          </div>
+      <div id="layer-roland" class="popover-layer" role="tooltip">
+        <h4 class="popover-layer-title">Roland</h4>
+        <div class="popover-layer-role">VP EXTERNAL &bull; FOUNDRY RELATIONS</div>
+        <p>Coordinates corporate outreach and technical visits to semiconductor leaders including AMD, GlobalFoundries, and A*STAR IME.</p>
+        <div class="tags-cluster" style="margin-top: 12px;">
+          <span class="tag-mono">FOUNDRY RELATIONS</span>
+          <span class="tag-mono">AMD &amp; GF EXPEDITIONS</span>
         </div>
       </div>
 
-      <div id="layer-bryan" class="astryx-layer">
-        <div class="astryx-layer-header">
-          <div>
-            <h4 class="astryx-layer-title">Bryan</h4>
-            <span class="astryx-layer-badge">Events Lead</span>
-          </div>
-          <button class="astryx-layer-close" aria-label="Close details">&times;</button>
-        </div>
-        <div class="astryx-layer-body">
-          <p>Organizes hands-on workshops, cleanroom fab tours at N2FC, and practical hardware labs across wafer processing and packaging.</p>
-          <div class="astryx-layer-tags">
-            <span class="astryx-layer-tag">N2FC Cleanroom</span>
-            <span class="astryx-layer-tag">Wafer Fab Labs</span>
-            <span class="astryx-layer-tag">Workshops</span>
-          </div>
+      <div id="layer-bryan" class="popover-layer" role="tooltip">
+        <h4 class="popover-layer-title">Bryan</h4>
+        <div class="popover-layer-role">EVENTS DIRECTOR &bull; CLEANROOM TOURS</div>
+        <p>Organizes technical workshops, cleanroom fab tours at N2FC, and practical hardware labs across wafer processing and testing.</p>
+        <div class="tags-cluster" style="margin-top: 12px;">
+          <span class="tag-mono">N2FC CLEANROOM</span>
+          <span class="tag-mono">WAFER FAB LABS</span>
         </div>
       </div>
 
-      <div id="layer-pranav" class="astryx-layer">
-        <div class="astryx-layer-header">
-          <div>
-            <h4 class="astryx-layer-title">Pranav</h4>
-            <span class="astryx-layer-badge">Sponsorships Lead</span>
-          </div>
-          <button class="astryx-layer-close" aria-label="Close details">&times;</button>
-        </div>
-        <div class="astryx-layer-body">
-          <p>Connects industry sponsors and corporate partners to club activities, supporting student projects and internship pipelines.</p>
-          <div class="astryx-layer-tags">
-            <span class="astryx-layer-tag">Sponsorships</span>
-            <span class="astryx-layer-tag">Internships</span>
-            <span class="astryx-layer-tag">Corporate Liaison</span>
-          </div>
+      <div id="layer-pranav" class="popover-layer" role="tooltip">
+        <h4 class="popover-layer-title">Pranav</h4>
+        <div class="popover-layer-role">SPONSORSHIPS DIRECTOR &bull; CORPORATE</div>
+        <p>Connects industry sponsors and corporate partners to club activities, supporting student projects and internship pipelines.</p>
+        <div class="tags-cluster" style="margin-top: 12px;">
+          <span class="tag-mono">SPONSORSHIPS</span>
+          <span class="tag-mono">INTERNSHIPS</span>
         </div>
       </div>
 
-      <div id="layer-srishti" class="astryx-layer">
-        <div class="astryx-layer-header">
-          <div>
-            <h4 class="astryx-layer-title">Srishti</h4>
-            <span class="astryx-layer-badge">Publicity Lead</span>
-          </div>
-          <button class="astryx-layer-close" aria-label="Close details">&times;</button>
-        </div>
-        <div class="astryx-layer-body">
-          <p>Directs branding, social channels, and publication of the Semicon Bulletin covering club site visits and technical insights.</p>
-          <div class="astryx-layer-tags">
-            <span class="astryx-layer-tag">Semicon Bulletin</span>
-            <span class="astryx-layer-tag">Social Media</span>
-            <span class="astryx-layer-tag">Brand Strategy</span>
-          </div>
+      <div id="layer-srishti" class="popover-layer" role="tooltip">
+        <h4 class="popover-layer-title">Srishti</h4>
+        <div class="popover-layer-role">PUBLICITY DIRECTOR &bull; BULLETIN</div>
+        <p>Directs technical publications, social channels, and release of the Semicon Bulletin covering club expeditions and technical insights.</p>
+        <div class="tags-cluster" style="margin-top: 12px;">
+          <span class="tag-mono">SEMICON BULLETIN</span>
+          <span class="tag-mono">PUBLICATIONS</span>
         </div>
       </div>
     </main>
 
-    <!-- Meta Footer -->
+    <!-- Footer -->
     <footer>
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="NTU Semiconductor Club Logo" class="footer-brand-img">
+          <img src="images/logo.png" alt="NTU Semiconductor Club Logo">
           <span>NTU Semiconductor Club</span>
         </div>
         <div class="footer-links">
-          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-telegram icon-telegram"></i> Telegram</a>
-          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-linkedin icon-linkedin"></i> LinkedIn</a>
-          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm"><i class="fa-regular fa-envelope"></i> Email</a>
+          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Telegram
+          </a>
+          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.07v8.37h2.78z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            Email
+          </a>
         </div>
         <div class="footer-copy">
-          &copy; 2026 NTU Semiconductor Club. Nanyang Technological University, Singapore.
+          &copy; 2026 NTU SEMICONDUCTOR CLUB &bull; NANYANG TECHNOLOGICAL UNIVERSITY, SINGAPORE
         </div>
       </div>
     </footer>

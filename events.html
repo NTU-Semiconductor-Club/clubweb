@@ -4,32 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Events & Bulletin | NTU Semiconductor Club</title>
-  <meta name="description" content="Semicon Bulletin AY2025/26 Semester 2 edition: A*STAR IME visit, AMD Singapore tour, N2FC cleanroom tours, AISG career launchpad, and networking coffee chat.">
+  <meta name="description" content="Semiconductor Bulletin AY2025/26: A*STAR IME visit, AMD Singapore tour, N2FC cleanroom tours, AISG career launchpad, and technical workshops.">
   
   <meta property="og:title" content="Events & Bulletin | NTU Semiconductor Club">
-  <meta property="og:description" content="Full-stack semiconductor events, cleanroom tours, and industry visits at NTU.">
+  <meta property="og:description" content="Full-stack semiconductor technical workshops, cleanroom tours, and industry visits at NTU.">
   <meta property="og:image" content="images/workshop1.jpg">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
-  <!-- Theme Initializer (Prevents FOUC) -->
-  <script>
-    (function(){const t=localStorage.getItem('clubweb-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
-  </script>
 </head>
 
 <body>
 
   <div id="wrapper">
 
-    <!-- Meta Header Bar -->
+    <!-- Navigation Bar -->
     <nav id="nav" role="navigation" aria-label="Main Navigation">
       <div class="nav-container">
         <a href="index.html" class="nav-brand">
@@ -40,17 +38,14 @@
           </div>
         </a>
 
-        <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="nav-actions">
           <button class="nav-search-btn" id="open-command-palette" aria-label="Open Command Palette (Cmd+K)">
-            <i class="fas fa-search"></i>
+            <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <span class="nav-search-text">Search</span>
             <kbd class="nav-search-kbd">⌘K</kbd>
           </button>
-          <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
           <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <i class="fas fa-bars"></i>
+            <svg class="xai-icon" width="16" height="16" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
         </div>
 
@@ -64,22 +59,24 @@
       </div>
     </nav>
 
-    <!-- Meta Header Banner -->
+    <!-- Hero Band -->
     <header class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1>Club Events</h1>
-          <p>Workshops, site visits, cleanroom tours, and networking from AY2025/26 Semester 2.</p>
+          <span class="eyebrow-mono">// SEMICONDUCTOR BULLETIN AY2025/26</span>
+          <h1>Club Events &amp; Expeditions</h1>
+          <p>Technical workshops, cleanroom tours, foundry visits, and engineering discussions organized throughout AY2025/26 Semester 2.</p>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Featured / Upcoming Event Series -->
+      <!-- Featured Workshop Series -->
       <section class="section">
+        <span class="eyebrow-mono">// TECHNICAL CURRICULUM</span>
         <div class="section-header">
-          <h2>Technical Workshop Series</h2>
-          <p>Workshops on chip design, microcontrollers, and CUDA programming.</p>
+          <h2>Hands-On Workshop Series</h2>
+          <p>Laboratory training in electronic design automation (EDA), microcontroller firmware, and CUDA GPU kernels.</p>
         </div>
 
         <div class="featured-event-card">
@@ -87,73 +84,74 @@
             <img src="images/workshop1.jpg" alt="Semiconductor Technical Workshop" loading="lazy">
           </div>
           <div class="featured-event-body">
-            <h3>Upcoming Workshop Series</h3>
-            <p>
-              A hands-on workshop series covering IC design basics, fabrication flows, embedded programming, and CUDA GPU acceleration for AI applications.
-            </p>
-            <a href="join.html" class="btn u-align-self-start">Register Interest</a>
+            <div class="event-date">AY2025/26 &bull; WORKSHOP SERIES</div>
+            <h3>Semiconductor Engineering Series</h3>
+            <p>Practical sessions covering digital circuit logic, silicon fabrication process flows, register-level embedded firmware, and CUDA GPU acceleration for computational models.</p>
+            <div>
+              <a href="join.html" class="btn btn-primary">Register Interest</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Recent Industrial Site Visits & Sessions (Bulletin Highlights) -->
-      <section class="section">
+      <!-- Industrial Site Visits & Cleanroom Tours -->
+      <section class="section" style="padding-top: 0;">
+        <span class="eyebrow-mono">// EXPEDITIONS &amp; BULLETIN HIGHLIGHTS</span>
         <div class="section-header">
-          <h2>Industrial Site Visits & Cleanroom Tours</h2>
-          <p>Highlights from our AY2025/26 Semester 2 industry visits and fab tours.</p>
+          <h2>Industrial Expeditions &amp; Fab Tours</h2>
+          <p>Highlights from our AY2025/26 Semester 2 foundry visits and research lab tours.</p>
         </div>
 
-        <!-- Astryx Event Filter Bar -->
-        <div class="astryx-filter-bar" role="tablist" aria-label="Event category filter">
-          <button class="astryx-filter-pill active" data-filter="all" role="tab" aria-selected="true">
-            <i class="fas fa-layer-group"></i> All Events <span class="astryx-filter-count">6</span>
+        <!-- Filter Bar -->
+        <div class="filter-bar" role="tablist" aria-label="Event category filter">
+          <button class="filter-pill active" data-filter="all" role="tab" aria-selected="true">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            All Expeditions <span class="filter-count">6</span>
           </button>
-          <button class="astryx-filter-pill" data-filter="fab" role="tab" aria-selected="false">
-            <i class="fas fa-mask"></i> Cleanroom & Fab <span class="astryx-filter-count">2</span>
+          <button class="filter-pill" data-filter="fab" role="tab" aria-selected="false">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+            Cleanroom &amp; Fab <span class="filter-count">2</span>
           </button>
-          <button class="astryx-filter-pill" data-filter="industry" role="tab" aria-selected="false">
-            <i class="fas fa-building"></i> Industry Visits <span class="astryx-filter-count">2</span>
+          <button class="filter-pill" data-filter="industry" role="tab" aria-selected="false">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M9 22v-4h6v4"></path></svg>
+            Industry Visits <span class="filter-count">2</span>
           </button>
-          <button class="astryx-filter-pill" data-filter="workshop" role="tab" aria-selected="false">
-            <i class="fas fa-code"></i> Workshops & Careers <span class="astryx-filter-count">2</span>
+          <button class="filter-pill" data-filter="workshop" role="tab" aria-selected="false">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Workshops &amp; Careers <span class="filter-count">2</span>
           </button>
         </div>
 
-        <div class="grid">
+        <!-- Event Cards Grid -->
+        <div class="grid" id="events-grid">
           <!-- A*STAR IME -->
           <div class="event-card" data-category="industry">
             <div class="event-card-img-wrapper">
-              <img src="images/ime.jpg" alt="A*STAR IME Industry Visit" loading="lazy">
+              <img src="images/ime.jpg" alt="A*STAR IME Visit" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div class="event-date">27 MARCH 2026</div>
+              <div class="event-date">10 FEB 2026 &bull; R&amp;D TOUR</div>
               <h3>A*STAR IME Industry Visit</h3>
-              <p>
-                Visited A*STAR IME to learn about advanced packaging and silicon photonics. The tour covered their photonics lab and packaging research facilities.
-              </p>
-              <div class="astryx-layer-tags">
-                <span class="astryx-layer-tag"><i class="fas fa-microscope u-margin-right-sm"></i> Silicon Photonics</span>
-                <span class="astryx-layer-tag">Advanced Packaging</span>
-                <span class="astryx-layer-tag">MEMS</span>
+              <p>Toured the Institute of Microelectronics (IME) at Science Park II. Learned about advanced silicon photonics, high-density 2.5D/3D packaging, and semiconductor metrology.</p>
+              <div class="tags-cluster">
+                <span class="tag-mono">SILICON PHOTONICS</span>
+                <span class="tag-mono">ADVANCED PACKAGING</span>
               </div>
             </div>
           </div>
 
-          <!-- AMD -->
+          <!-- AMD Singapore -->
           <div class="event-card" data-category="industry">
             <div class="event-card-img-wrapper">
-              <img src="images/amd.jpg" alt="AMD Industry Visit" loading="lazy">
+              <img src="images/amd.jpg" alt="AMD Singapore Visit" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div class="event-date">25 FEBRUARY 2026</div>
-              <h3>AMD Industry Visit</h3>
-              <p>
-                Students visited AMD Singapore to observe real-world chip testing and bring-up. The tour covered System Level Test (SLT), Final Test, Failure Analysis, and AMD's CPU, GPU, and datacenter accelerator portfolio.
-              </p>
-              <div class="astryx-layer-tags">
-                <span class="astryx-layer-tag"><i class="fas fa-microchip u-margin-right-sm"></i> System Level Test (SLT)</span>
-                <span class="astryx-layer-tag">Final Test</span>
-                <span class="astryx-layer-tag">Failure Analysis</span>
+              <div class="event-date">6 FEB 2026 &bull; LAB EXPEDITION</div>
+              <h3>AMD Singapore Industry Visit</h3>
+              <p>Technical visit to AMD Singapore. Students inspected the System Level Test (SLT) floor, failure analysis labs, and learned about GPU architecture and post-silicon validation.</p>
+              <div class="tags-cluster">
+                <span class="tag-mono">SYSTEM LEVEL TEST</span>
+                <span class="tag-mono">CHIP BRING-UP</span>
               </div>
             </div>
           </div>
@@ -164,15 +162,12 @@
               <img src="images/n2fc.jpg" alt="N2FC Fab Tour" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div class="event-date">26 JAN & 23 FEB 2026</div>
+              <div class="event-date">26 JAN &amp; 23 FEB 2026 &bull; CLEANROOM</div>
               <h3>N2FC Fab Tour</h3>
-              <p>
-                Hosted two back-to-back cleanroom visits to the Nanyang NanoFabrication Centre (N2FC). Members toured the N2FC cleanroom and saw photolithography machines and wafer processing tools in action.
-              </p>
-              <div class="astryx-layer-tags">
-                <span class="astryx-layer-tag"><i class="fas fa-mask u-margin-right-sm"></i> Cleanroom Class 100/1000</span>
-                <span class="astryx-layer-tag">Photolithography</span>
-                <span class="astryx-layer-tag">Wafer Tools</span>
+              <p>Two cleanroom visits to Nanyang NanoFabrication Centre (N2FC). Members donned cleanroom suits and observed ultraviolet photolithography equipment and wafer processing tools in action.</p>
+              <div class="tags-cluster">
+                <span class="tag-mono">CLASS 100/1000 CLEANROOM</span>
+                <span class="tag-mono">PHOTOLITHOGRAPHY</span>
               </div>
             </div>
           </div>
@@ -183,15 +178,12 @@
               <img src="images/globalfoundries.jpg" alt="GlobalFoundries Visit" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div class="event-date">AY2025/26</div>
+              <div class="event-date">AY2025/26 &bull; FOUNDRY TOUR</div>
               <h3>GlobalFoundries Visit</h3>
-              <p>
-                Students toured commercial wafer fab facilities, observing silicon manufacturing operations, foundry engineering roles, and yield analysis in high-volume production.
-              </p>
-              <div class="astryx-layer-tags">
-                <span class="astryx-layer-tag"><i class="fas fa-industry u-margin-right-sm"></i> Commercial Fab Line</span>
-                <span class="astryx-layer-tag">Automated Cleanroom</span>
-                <span class="astryx-layer-tag">Yield Analysis</span>
+              <p>Toured commercial wafer fabrication lines, observing automated cassette handling, semiconductor yield engineering, and high-volume wafer production.</p>
+              <div class="tags-cluster">
+                <span class="tag-mono">COMMERCIAL FAB</span>
+                <span class="tag-mono">YIELD ANALYSIS</span>
               </div>
             </div>
           </div>
@@ -202,14 +194,12 @@
               <img src="images/networking.jpg" alt="Networking Coffee Chat" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div class="event-date">2 APRIL 2026</div>
+              <div class="event-date">2 APRIL 2026 &bull; MENTORSHIP</div>
               <h3>Networking Coffee Chat</h3>
-              <p>
-                An informal coffee chat where members discussed internships, career paths in semiconductors, and upcoming club plans.
-              </p>
-              <div class="astryx-layer-tags">
-                <span class="astryx-layer-tag"><i class="fas fa-comments u-margin-right-sm"></i> Engineer Mentorship</span>
-                <span class="astryx-layer-tag">Career Guidance</span>
+              <p>Informal technical chat where members connected with senior engineers to discuss fab engineering internships, IC design careers, and club project roadmaps.</p>
+              <div class="tags-cluster">
+                <span class="tag-mono">ENGINEER MENTORSHIP</span>
+                <span class="tag-mono">CAREER GUIDANCE</span>
               </div>
             </div>
           </div>
@@ -220,15 +210,12 @@
               <img src="images/career.jpg" alt="AI Career Launch Pad" loading="lazy">
             </div>
             <div class="event-card-body">
-              <div class="event-date">22 JANUARY 2026</div>
+              <div class="event-date">22 JAN 2026 &bull; CAREER</div>
               <h3>AI Career Launch Pad (with AI Singapore)</h3>
-              <p>
-                Partnered with AI Singapore (AISG) to demonstrate how hardware and systems knowledge translates into AI careers. Students were introduced to the AIIP and AIAP apprenticeship programs.
-              </p>
-              <div class="astryx-layer-tags">
-                <span class="astryx-layer-tag"><i class="fas fa-brain u-margin-right-sm"></i> AI Singapore (AISG)</span>
-                <span class="astryx-layer-tag">AIIP & AIAP</span>
-                <span class="astryx-layer-tag">Systems & AI</span>
+              <p>Joint session with AI Singapore demonstrating how hardware fundamentals and systems programming bridge into machine learning roles, introducing AIIP and AIAP apprenticeship tracks.</p>
+              <div class="tags-cluster">
+                <span class="tag-mono">AI SINGAPORE (AISG)</span>
+                <span class="tag-mono">AIIP &amp; AIAP TRACKS</span>
               </div>
             </div>
           </div>
@@ -236,20 +223,29 @@
       </section>
     </main>
 
-    <!-- Meta Footer -->
+    <!-- Footer -->
     <footer>
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="NTU Semiconductor Club Logo" class="footer-brand-img">
+          <img src="images/logo.png" alt="NTU Semiconductor Club Logo">
           <span>NTU Semiconductor Club</span>
         </div>
         <div class="footer-links">
-          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-telegram icon-telegram"></i> Telegram</a>
-          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-linkedin icon-linkedin"></i> LinkedIn</a>
-          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm"><i class="fa-regular fa-envelope"></i> Email</a>
+          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Telegram
+          </a>
+          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.07v8.37h2.78z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            Email
+          </a>
         </div>
         <div class="footer-copy">
-          &copy; 2026 NTU Semiconductor Club. Nanyang Technological University, Singapore.
+          &copy; 2026 NTU SEMICONDUCTOR CLUB &bull; NANYANG TECHNOLOGICAL UNIVERSITY, SINGAPORE
         </div>
       </div>
     </footer>

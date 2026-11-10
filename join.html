@@ -7,29 +7,27 @@
   <meta name="description" content="Connect with NTU Semiconductor Club via Telegram, LinkedIn, email, or GitHub. Learn how to become a member and participate in full-stack semiconductor events.">
   
   <meta property="og:title" content="Join & Contact Us | NTU Semiconductor Club">
-  <meta property="og:description" content="Official contact channels, Telegram group, LinkedIn page, and membership sign-up for NTU Semiconductor Club.">
+  <meta property="og:description" content="Official channels, community access, and membership onboarding for NTU Semiconductor Club.">
   <meta property="og:image" content="images/hero.jpg">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
-  <!-- Theme Initializer (Prevents FOUC) -->
-  <script>
-    (function(){const t=localStorage.getItem('clubweb-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
-  </script>
 </head>
 
 <body>
 
   <div id="wrapper">
 
-    <!-- Meta Header Bar -->
+    <!-- Navigation Bar -->
     <nav id="nav" role="navigation" aria-label="Main Navigation">
       <div class="nav-container">
         <a href="index.html" class="nav-brand">
@@ -40,17 +38,14 @@
           </div>
         </a>
 
-        <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="nav-actions">
           <button class="nav-search-btn" id="open-command-palette" aria-label="Open Command Palette (Cmd+K)">
-            <i class="fas fa-search"></i>
+            <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <span class="nav-search-text">Search</span>
             <kbd class="nav-search-kbd">⌘K</kbd>
           </button>
-          <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
           <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
-            <i class="fas fa-bars"></i>
+            <svg class="xai-icon" width="16" height="16" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
         </div>
 
@@ -64,195 +59,212 @@
       </div>
     </nav>
 
-    <!-- Meta Header Banner -->
+    <!-- Hero Band -->
     <header class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1>Join & Contact Us</h1>
-          <p>Join our Telegram chat, follow us on LinkedIn, or email us directly.</p>
+          <span class="eyebrow-mono">// MEMBERSHIP REGISTRATION</span>
+          <h1>Join &amp; Connect</h1>
+          <p>Official communication channels, registration guidelines, and answers to frequently asked questions for prospective members.</p>
           <div class="hero-actions">
-            <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn"><i class="fa-brands fa-telegram"></i> Telegram Group</a>
-            <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Page</a>
+            <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg class="xai-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              Telegram Community
+            </a>
+            <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg class="xai-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.07v8.37h2.78z"/></svg>
+              LinkedIn Page
+            </a>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Direct Contact & Community Links Grid -->
+      <!-- Direct Contact Channels Grid -->
       <section class="section">
+        <span class="eyebrow-mono">// DIRECT ACCESS CHANNELS</span>
         <div class="section-header">
           <h2>Official Channels</h2>
-          <p>Choose your preferred channel to connect with our committee and members.</p>
+          <p>Access our community discussion, announcements, professional network, and codebase.</p>
         </div>
 
         <div class="grid">
           <!-- Telegram -->
           <div class="card">
-            <h3><i class="fa-brands fa-telegram icon-telegram u-margin-right-sm"></i> Telegram Group</h3>
-            <p>Join our 400+ member Telegram group for the latest event announcements and community chat.</p>
-            <div class="u-margin-top-md">
-              <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary">Join Telegram</a>
+            <h3>Telegram Community</h3>
+            <p>Real-time channel for announcements, tour signups, workshop schedules, and student discussion.</p>
+            <div style="margin-top: auto; padding-top: 16px;">
+              <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary">
+                <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                Join Telegram
+              </a>
             </div>
           </div>
 
+          <!-- LinkedIn -->
           <div class="card">
-            <h3><i class="fa-brands fa-linkedin icon-linkedin u-margin-right-sm"></i> LinkedIn Page</h3>
-            <p>Follow our LinkedIn page for event recaps, industry news, and networking updates.</p>
-            <div class="u-margin-top-md">
-              <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary">Follow on LinkedIn</a>
+            <h3>LinkedIn Page</h3>
+            <p>Professional updates, event recaps, corporate visits, and engineering career highlights.</p>
+            <div style="margin-top: auto; padding-top: 16px;">
+              <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary">
+                <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.07v8.37h2.78z"/></svg>
+                Connect on LinkedIn
+              </a>
             </div>
           </div>
 
+          <!-- Email -->
           <div class="card">
-            <h3><i class="fa-regular fa-envelope u-margin-right-sm"></i> Email Inquiries</h3>
-            <p>Reach out to the executive committee for sponsorships, partnerships, or general inquiries.</p>
-            <div class="u-margin-top-md">
-              <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary">Email Us</a>
+            <h3>Email Inquiries</h3>
+            <p>Direct contact with the executive committee for institutional partnerships, sponsorships, and guest sessions.</p>
+            <div style="margin-top: auto; padding-top: 16px;">
+              <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary">
+                <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                ntu.semiconductor.club@ntu.edu.sg
+              </a>
             </div>
           </div>
 
+          <!-- GitHub -->
           <div class="card">
-            <h3><i class="fa-brands fa-github u-margin-right-sm"></i> GitHub Organization</h3>
-            <p>Check out open-source club projects, workshop materials, and code repositories.</p>
-            <div class="u-margin-top-md">
-              <a href="https://github.com/NTU-Semiconductor-Club" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fa-brands fa-github"></i> View GitHub Org</a>
+            <h3>GitHub Organization</h3>
+            <p>Open-source repositories, workshop slide decks, hardware simulation testbenches, and club software.</p>
+            <div style="margin-top: auto; padding-top: 16px;">
+              <a href="https://github.com/NTU-Semiconductor-Club" target="_blank" rel="noopener" class="btn btn-secondary">
+                <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub Repositories
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Member Benefits Section -->
-      <section class="section">
+      <!-- Member Benefits -->
+      <section class="section" style="padding-top: 0;">
+        <span class="eyebrow-mono">// MEMBER VALUE PROPOSITION</span>
         <div class="section-header">
-          <h2>Why Join NTU Semiconductor Club?</h2>
-          <p>Gain practical exposure across the entire semiconductor stack.</p>
+          <h2>Why Join the Club</h2>
+          <p>Practical engineering exposure spanning wafer fabrication, design automation, and processor architectures.</p>
         </div>
 
         <div class="grid">
           <div class="card">
-            <h3>Exclusive Industry Visits</h3>
-            <p>Priority access to company site visits at AMD, GlobalFoundries, A*STAR, and more.</p>
+            <h3>Foundry &amp; Cleanroom Access</h3>
+            <p>Priority allocation for plant visits at AMD, GlobalFoundries, A*STAR IME, and NTU N2FC cleanrooms.</p>
           </div>
 
           <div class="card">
-            <h3>Hands-on Workshops</h3>
-            <p>Technical sessions on EDA tools, embedded programming, CUDA, and circuit design.</p>
+            <h3>Technical Workshops</h3>
+            <p>Hands-on sessions on EDA layout tools, microcontroller firmware, CUDA compute, and digital IC simulation.</p>
           </div>
 
           <div class="card">
-            <h3>Career Networking</h3>
-            <p>Coffee chats and career panels with engineers from the semiconductor industry.</p>
+            <h3>Industry Networking</h3>
+            <p>Direct coffee chats, resume reviews, and panel sessions with practicing engineers from the semiconductor industry.</p>
           </div>
 
           <div class="card">
-            <h3>Peer Community</h3>
-            <p>Connect with fellow students passionate about hardware, chips, and computing.</p>
+            <h3>Multidisciplinary Peer Community</h3>
+            <p>Work alongside peers focused on silicon hardware, compilers, computer systems, and microelectronics.</p>
           </div>
         </div>
       </section>
 
-      <!-- Discipline Eligibility -->
-      <section class="section">
+      <!-- Onboarding Steps -->
+      <section class="section" style="padding-top: 0;">
+        <span class="eyebrow-mono">// ONBOARDING PROCESS</span>
         <div class="section-header">
-          <h2>Who Can Join?</h2>
-          <p>We welcome undergraduate and postgraduate students from all NTU schools and majors.</p>
-        </div>
-
-        <p class="u-text-secondary u-max-width-600">Open to all NTU students regardless of faculty or year. Whether you study EEE, SCSE, MSE, Physics, or any other discipline — everyone is welcome.</p>
-      </section>
-
-      <!-- How to Join Steps -->
-      <section class="section">
-        <div class="section-header">
-          <h2>How To Become A Member</h2>
+          <h2>Registration Steps</h2>
+          <p>Simple three-step enrollment process for NTU students.</p>
         </div>
 
         <div class="grid-3">
-          <div class="card u-text-center">
-            <div class="step-number">1</div>
-            <h3>Join the Community</h3>
-            <p>Join our official <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="u-text-blue u-text-underline">Telegram Group</a> to get real-time announcements.</p>
-          </div>
-          
-          <div class="card u-text-center">
-            <div class="step-number">2</div>
-            <h3>Follow our Updates</h3>
-            <p>Follow us on <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="u-text-blue u-text-underline">LinkedIn</a> to connect with industry professionals.</p>
+          <div class="step-card">
+            <div class="step-badge">01</div>
+            <h3>Join Telegram</h3>
+            <p>Join the official Telegram channel for poll registrations, lab tour notices, and schedule releases.</p>
           </div>
 
-          <div class="card u-text-center">
-            <div class="step-number">3</div>
-            <h3>Attend Workshops</h3>
-            <p>Participate in foundry site visits, technical workshops, and club social events.</p>
+          <div class="step-card">
+            <div class="step-badge">02</div>
+            <h3>Follow LinkedIn</h3>
+            <p>Connect with our professional network for industry recaps, engineering career events, and panel recordings.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">03</div>
+            <h3>Attend Expeditions</h3>
+            <p>Participate in N2FC cleanroom tours, commercial fab visits, and hands-on laboratory workshops throughout the semester.</p>
           </div>
         </div>
       </section>
 
-      <!-- Frequently Asked Questions (Astryx Accordion) -->
-      <section class="section">
+      <!-- FAQ Accordion -->
+      <section class="section" style="padding-top: 0;">
+        <span class="eyebrow-mono">// FREQUENTLY ASKED QUESTIONS</span>
         <div class="section-header">
           <h2>Frequently Asked Questions</h2>
-          <p>Everything you need to know about membership, events, and participation.</p>
+          <p>Clear answers regarding eligibility, tour allocations, and technical prerequisites.</p>
         </div>
 
-        <div class="astryx-accordion">
-          <div class="astryx-accordion-item">
-            <button class="astryx-accordion-trigger" aria-expanded="false">
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
               <span>Do I need prior IC design or cleanroom experience to join?</span>
-              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+              <svg class="xai-icon faq-icon" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="astryx-accordion-panel">
-              <div class="astryx-accordion-content">
-                No prior background is required. Our beginner workshops introduce circuit fundamentals, EDA tools, and cleanroom protocols step-by-step from first principles.
+            <div class="faq-body">
+              <div class="faq-content">
+                No prior background is required. Workshops and cleanroom orientations start from first principles, teaching circuit basics, EDA workflows, and cleanroom gowning protocols from the ground up.
               </div>
             </div>
           </div>
 
-          <div class="astryx-accordion-item">
-            <button class="astryx-accordion-trigger" aria-expanded="false">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
               <span>Are foundry visits and cleanroom tours free for members?</span>
-              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+              <svg class="xai-icon faq-icon" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="astryx-accordion-panel">
-              <div class="astryx-accordion-content">
-                Yes! All club-organized visits to AMD, GlobalFoundries, A*STAR IME, and NTU N2FC cleanroom tours are completely free for registered members. Spots are allocated via Telegram registration polls due to facility limits.
+            <div class="faq-body">
+              <div class="faq-content">
+                Yes. All club-organized visits to AMD, GlobalFoundries, A*STAR IME, and NTU N2FC cleanrooms are completely free for registered students. Spots are allocated via Telegram registration polls due to cleanroom gowning capacity limits.
               </div>
             </div>
           </div>
 
-          <div class="astryx-accordion-item">
-            <button class="astryx-accordion-trigger" aria-expanded="false">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
               <span>Can students from outside engineering (SCSE / MSE / Physics / Business) join?</span>
-              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+              <svg class="xai-icon faq-icon" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="astryx-accordion-panel">
-              <div class="astryx-accordion-content">
-                Yes, our club is multidisciplinary. Semiconductor technology spans computing systems (SCSE), materials science (MSE), device physics (SPMS), and supply chain management (NBS). All NTU students are welcome.
+            <div class="faq-body">
+              <div class="faq-content">
+                Yes. Microelectronics intersects computing systems (SCSE), materials science (MSE), device physics (SPMS), and supply chain management (NBS). Students across all academic years and disciplines are welcome.
               </div>
             </div>
           </div>
 
-          <div class="astryx-accordion-item">
-            <button class="astryx-accordion-trigger" aria-expanded="false">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
               <span>How do I participate in CUDA GPU programming and AI hardware projects?</span>
-              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+              <svg class="xai-icon faq-icon" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="astryx-accordion-panel">
-              <div class="astryx-accordion-content">
-                We partner with AI Singapore (AISG) and run hands-on CUDA workshops for hardware-accelerated deep learning. Workshop schedules and repository links are shared directly in our Telegram group.
+            <div class="faq-body">
+              <div class="faq-content">
+                We partner with AI Singapore (AISG) and conduct practical CUDA workshops for deep learning acceleration. Session dates, test datasets, and GitHub repo links are published directly in our Telegram channel.
               </div>
             </div>
           </div>
 
-          <div class="astryx-accordion-item">
-            <button class="astryx-accordion-trigger" aria-expanded="false">
-              <span>How can I join the executive committee or become a student lead?</span>
-              <i class="fas fa-chevron-down astryx-accordion-icon"></i>
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How can I join the executive committee or become a portfolio director?</span>
+              <svg class="xai-icon faq-icon" width="16" height="16" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="astryx-accordion-panel">
-              <div class="astryx-accordion-content">
-                Executive committee recruitment opens at the beginning of each academic semester. Active members who organize events or lead workshops can apply for portfolio lead roles.
+            <div class="faq-body">
+              <div class="faq-content">
+                Executive committee applications open before each academic semester. Active members who organize events or assist with workshop materials are eligible to apply for portfolio director roles.
               </div>
             </div>
           </div>
@@ -260,33 +272,48 @@
       </section>
 
       <!-- Direct Contact CTA Card -->
-      <section class="section">
-        <div class="card cta-card">
-          <h2>Need to Reach Us Directly?</h2>
-          <p>Email our executive committee at ntu.semiconductor.club@ntu.edu.sg or send a message in our Telegram group.</p>
-          <div class="cta-card-actions">
-            <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn"><i class="fa-brands fa-telegram"></i> Telegram Group</a>
-            <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Page</a>
-            <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary"><i class="fa-regular fa-envelope"></i> Email Committee</a>
+      <section class="section" style="padding-top: 0;">
+        <div class="card" style="padding: 40px;">
+          <span class="eyebrow-mono">// DIRECT CONTACT</span>
+          <h2 style="font-size: 32px; margin-bottom: 12px;">Contact the Executive Committee</h2>
+          <p style="max-width: 680px; margin-bottom: 24px;">For corporate partnerships, sponsorship inquiries, or cleanroom collaboration, message our team directly.</p>
+          <div class="hero-actions">
+            <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-primary">
+              <svg class="xai-icon" width="15" height="15" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              Email Committee
+            </a>
+            <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg class="xai-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              Telegram Community
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Meta Footer -->
+    <!-- Footer -->
     <footer>
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="NTU Semiconductor Club Logo" class="footer-brand-img">
+          <img src="images/logo.png" alt="NTU Semiconductor Club Logo">
           <span>NTU Semiconductor Club</span>
         </div>
         <div class="footer-links">
-          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-telegram icon-telegram"></i> Telegram</a>
-          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-linkedin icon-linkedin"></i> LinkedIn</a>
-          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm"><i class="fa-regular fa-envelope"></i> Email</a>
+          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Telegram
+          </a>
+          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.07v8.37h2.78z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            Email
+          </a>
         </div>
         <div class="footer-copy">
-          &copy; 2026 NTU Semiconductor Club. Nanyang Technological University, Singapore.
+          &copy; 2026 NTU SEMICONDUCTOR CLUB &bull; NANYANG TECHNOLOGICAL UNIVERSITY, SINGAPORE
         </div>
       </div>
     </footer>

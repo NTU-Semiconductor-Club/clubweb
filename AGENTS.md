@@ -11,54 +11,64 @@ Welcome to the **NTU Semiconductor Club Website** repository (`clubweb`). This f
   - **Zero npm/Node.js dependencies** in the root repository. Do NOT add `package.json`, `node_modules/`, Webpack, Vite, Tailwind, or React to the repository.
   - The site must be immediately deployable by copying static files or via GitHub Pages.
 - **Root Directory Structure**:
-  - `index.html`: Homepage featuring mission statement, quick stats, learning pillars, and latest announcements.
+  - `index.html`: Homepage featuring mission, learning pillars, metrics, and semiconductor curriculum.
   - `about.html`: Club background, executive message, and in-depth curriculum pillars.
   - `events.html`: AY2025/26 Semester 2 industrial site visits, cleanroom fab tours, workshop series, and category filter pills.
-  - `committee.html`: Executive committee profiles, leadership bio cards, and Astryx layer offset popovers.
-  - `join.html`: Membership registration steps, official channels, and accessible Astryx FAQ accordion.
-  - `assets/css/main.css`: Consolidated stylesheet containing Meta Astryx design tokens, layer positioning, layout, and component styles.
-  - `assets/js/main.js`: Consolidated vanilla script implementing Astryx offset engine, command palette (`⌘K`), toast notification system, light-dismiss stack, lightbox viewer, and theme switcher.
-  - `images/`: Club event photos, sponsor/partner imagery, and official logos.
+  - `committee.html`: Executive committee profiles, leadership bio cards, and layer offset popovers.
+  - `join.html`: Membership registration steps, official channels, and accessible FAQ accordion.
+  - `assets/css/main.css`: Consolidated stylesheet implementing the xAI design tokens, typography ladder, hairline layout, and pill components.
+  - `assets/js/main.js`: Consolidated vanilla script implementing command palette (`⌘K`), layer offset popovers, toast notification system, image lightbox, event filtering, and mobile drawer.
+  - `images/`: Club event photos, partner imagery, and official logos.
   - `images/committee/`: Executive leadership headshots (`ray.jpg`, `rishabh.jpg`, etc.).
 
 ---
 
-## 2. Meta Astryx Design System Standards
+## 2. xAI Design System Standards
 
-The website integrates architectural patterns and design tokens from Meta's open-source **[Astryx Design System](https://github.com/facebook/astryx)**:
+The website strictly follows the **xAI Design System** as documented in [getdesign.md/x.ai/design-md](https://getdesign.md/x.ai/design-md):
 
-### 2.1 CSS Token Cascade (`assets/css/main.css`)
-- **Modern Color Tokens with `light-dark()`**:
-  - Surface: `--color-background-surface: light-dark(#ffffff, #1c1e21)`
-  - Cards: `--color-background-card: light-dark(#f7f8fa, #242526)`
-  - Borders: `--color-border: light-dark(#e4e6eb, #393a3b)`
-  - Text Primary: `--color-text-primary: light-dark(#1c1e21, #f5f6f7)`
-  - Text Secondary: `--color-text-secondary: light-dark(#65676b, #b0b3b8)`
-  - Brand Primary: `--color-brand: #0866ff` (Meta Astryx Electric Blue)
-- **3-Tier Elevation (Shadows)**:
-  - Low: `--shadow-low: 0 1px 2px rgba(0, 0, 0, 0.08)`
-  - Medium: `--shadow-med: 0 4px 12px rgba(0, 0, 0, 0.12)`
-  - High: `--shadow-high: 0 12px 28px rgba(0, 0, 0, 0.20)`
-- **Standardized Spacing & Border Radii**:
-  - Spacing scale: `--spacing-1` (4px) through `--spacing-12` (48px)
-  - Radii: `--radius-inner` (4px), `--radius-element` (8px), `--radius-container` (12px), `--radius-pill` (9999px)
+### 2.1 Color Tokens & Canvas Surface (`assets/css/main.css`)
+- **Strict Near-Black Canvas Edge-to-Edge**:
+  - Canvas: `--color-canvas: #0a0a0a` (The only page surface. Zero light-mode counterpart.)
+  - Soft Canvas: `--color-canvas-soft: #1a1c20` (nav hover, tooltip/popover fills)
+  - Card Fill: `--color-canvas-card: #191919` (content and feature cards)
+  - Mid Canvas: `--color-canvas-mid: #363a3f` (nested code mockups, badges)
+  - Hairline: `--color-hairline: #212327` (all structural dividing lines and borders)
+- **Text & Ink**:
+  - Primary / Ink: `--color-ink: #ffffff`
+  - Body Text: `--color-body: #dadbdf`
+  - Muted / Caption: `--color-mute: #7d8187`
+- **Illustrative Accents (Used Sparingly)**:
+  - Sunset Orange: `--color-accent-sunset: #ff7a17`
+  - Dusk Purple: `--color-accent-dusk: #7c3aed`
+  - Twilight Violet: `--color-accent-twilight: #c4b5fd`
+  - Breeze Blue: `--color-accent-breeze: #a0c3ec`
+- **Zero Shadows & Hairline Elevation**:
+  - All `box-shadow` values are `none`. Elevation is achieved solely through hairline borders (`1px solid #212327`) and surface tone contrasts.
+- **Zero Mode Toggle**:
+  - No theme switchers, no light mode buttons, and no FOUC theme initialization scripts. The canvas is permanently near-black (`#0a0a0a`).
 
-### 2.2 Astryx Layer Offset Engine (`core-layer--offset`)
-- Floating popovers (such as committee info cards) use native context anchor positioning with `offset: 8px` (`--spacing-2`).
-- Boundary collision detection: Automatically clamps horizontally inside viewport margins and flips vertically between bottom and top placement when approaching viewport edges.
-- Dismissal stack:
-  - **Light-dismiss**: Clicking or tapping outside the active layer immediately closes it.
-  - **Keyboard dismiss**: Pressing the `Escape` key closes the topmost active layer.
-  - **Focus return**: Returns focus cleanly to trigger elements for screen reader accessibility.
+### 2.2 Typography & Strict Regular Weight 400
+- **Two-Face System**:
+  - **Geometric Sans (`Inter`)**: Used for all display headings and body copy. Weight 400 is enforced across the board. Negative letter-spacing is applied to all display sizes:
+    - `display-xl`: 96px, line-height 96px, letter-spacing -2.4px (scales to 48px, line-height 52px, letter-spacing -1.2px on mobile)
+    - `display-lg`: 64px - 72px, line-height 68px, letter-spacing -1.6px
+    - `display-md`: 44px - 48px, line-height 48px, letter-spacing -1.2px
+    - `display-sm`: 32px, line-height 36px, letter-spacing -0.6px
+  - **Monospace (`Geist Mono`)**: Used for code-comment style uppercase eyebrows (`.eyebrow-mono`), metric numbers, and technical labels. Tracked positively (`1.4px` at 13-14px).
+- **Strict Regular Weight**: Never bold display headlines. Weight 400 is the entire scale.
 
-### 2.3 Global Interactive Components
-- **Command Palette (`⌘K` or `Ctrl+K`)**: Modal search index filtering pages, learning pillars, industrial site visits, executive leads, and social links with keyboard navigation (`↑`/`↓` and `Enter`).
-- **Astryx Accessible Accordion (`.astryx-accordion`)**: Interactive FAQ accordion on `join.html` with dynamic `max-height` transitions, single-item auto-collapse behavior, rotating chevrons, and full `aria-expanded` keyboard accessibility.
-- **Lightbox Viewer**: Modal image expansion for event photos with backdrop blur and caption display.
-- **Theme Switcher**: Instant dark/light mode toggle with `localStorage` persistence, OS `prefers-color-scheme` synchronization, and `<head>` FOUC prevention script.
-- **Toast Notifications (`useToast`)**: Non-blocking floating status pills in bottom-right corner for interactive feedback (theme switching, email copy, etc.).
-- **Event Category Filters**: Instant category filtering on `events.html` (All, Cleanroom & Fab, Industry Visits, Workshops & Careers) using data attributes (`data-category` and `data-filter`).
-- **Pulsing Status Indicator (`.astryx-status-indicator`)**: Real-time pulsing badge in hero section signaling active AY2025/26 Semester 2 enrollment.
+### 2.3 Interactive Vocabulary & Shapes
+- **The Universal Pill (`border-radius: 9999px`)**:
+  - Every interactive button, filter pill, and action trigger is a pill (`--rounded-pill: 9999px`).
+  - **Canonical Outline Pill**: `background: transparent; border: 1px solid rgba(255, 255, 255, 0.22); color: #ffffff;`.
+  - **Primary White Pill (Rare)**: `background: #ffffff; color: #0a0a0a; border: 1px solid #ffffff;`.
+- **Cards (`border-radius: 8px`)**:
+  - All cards (`.card`, `.event-card`, `.person-card`) use tight 8px radii (`--rounded-sm: 8px`), `#191919` surface fill, and `1px solid #212327` hairline borders.
+
+### 2.4 Built-In Vector SVGs (Zero Third-Party Icon Fonts)
+- All icons across the site (search, external link, terminal, cleanroom mask, chip, code, social channels, chevron, checkmark) are self-contained, clean vector SVGs.
+- Do NOT use external icon fonts (such as Font Awesome CDN) which introduce render latency, network failure points, and missing-glyph fallback boxes `[X]`.
 
 ---
 
@@ -82,12 +92,13 @@ Never use synthetic or inflated AI marketing words (including all stems, plural,
 - ❌ `supercharge`, `supercharges`, `supercharged`, `supercharging`
 - ❌ `synergy`, `synergies`, `synergistic`
 
-### 3.2 Banned Synthetic Marketing Clichés & Rhetorical Formulas
+### 3.2 Banned Synthetic Marketing Clichés & Filler
 - ❌ *"In today's rapidly evolving semiconductor landscape..."*
 - ❌ *"A testament to our commitment to fostering innovation..."*
 - ❌ *"Delve into the cutting-edge realm of..."*
 - ❌ *"Empowering the next generation of engineers..."*
 - ❌ *"Supercharging student potential through industry synergies..."*
+- ❌ Useless generic status pills like *"AY2025/26 Semester 2 • Active Community"*. Use precise technical descriptions instead: *“AY2025/26 Curriculum • NTU NanoFabrication Centre & Foundry Partnerships”*.
 
 ### 3.3 Required Writing Style
 - Keep text factual, concise, natural, and grounded in student club context.
@@ -161,14 +172,28 @@ for f in glob.glob('*.html'):
             sys.exit(1)
 print('All images exist, have lowercase extensions, and include valid alt text.')
 "
+
+# 4. Strict xAI compliance: ensure zero theme toggles or light-mode scripts remain
+python3 -c "
+import glob, sys
+for f in glob.glob('*.html') + ['assets/js/main.js', 'assets/css/main.css']:
+    content = open(f).read()
+    if 'theme-toggle' in content or 'nav-theme-toggle' in content:
+        print(f'Holdover theme toggle found in {f}')
+        sys.exit(1)
+    if 'prefers-color-scheme' in content and f.endswith('.html'):
+        print(f'Holdover theme script found in {f}')
+        sys.exit(1)
+print('Zero holdover theme switchers or light-mode scripts found.')
+"
 ```
 
 ### 5.3 Audit Checklist
-- [ ] Zero browser console errors.
-- [ ] Zero 404 or failed network requests.
-- [ ] Command Palette (`⌘K`) opens, filters correctly, and closes on `ESC`.
-- [ ] Astryx Layer Offset positions correctly without overflowing viewport.
-- [ ] Theme toggle switches between light and dark modes without FOUC.
-- [ ] Event filter tabs properly show/hide corresponding event cards.
-- [ ] FAQ accordion toggles expand/collapse cleanly with smooth animation.
-- [ ] Mobile navigation drawer toggles at viewports ≤ 768px.
+- [ ] Pure near-black canvas `#0a0a0a` edge-to-edge.
+- [ ] Zero theme switcher buttons, zero light-mode holdovers.
+- [ ] All interactive buttons are outline pills (`border-radius: 9999px`) with translucent white hairline borders.
+- [ ] Strict weight 400 across all display headings and body text.
+- [ ] All icons are built out as crisp, self-contained inline SVGs (no missing font glyphs `[X]`).
+- [ ] Command Palette (`⌘K`) opens, filters correctly with SVGs, and closes on `ESC`.
+- [ ] FAQ accordion toggles expand/collapse cleanly with SVG rotating chevron.
+- [ ] Layer offset popovers position cleanly with hairline borders and zero shadows.

@@ -4,32 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us | NTU Semiconductor Club</title>
-  <meta name="description" content="Learn about NTU Semiconductor Club's full-stack vision spanning chip design, fab, embedded systems, GPU programming, and AI applications.">
+  <meta name="description" content="Academic organization at Nanyang Technological University bridging silicon IC design, cleanroom fabrication, embedded firmware, and GPU systems.">
   
   <meta property="og:title" content="About Us | NTU Semiconductor Club">
-  <meta property="og:description" content="Learn about NTU Semiconductor Club — a student-run organization bridging hardware design, fabrication, and software.">
+  <meta property="og:description" content="Academic organization at NTU bridging silicon IC design, cleanroom fabrication, embedded firmware, and GPU systems.">
   <meta property="og:image" content="images/industry.jpg">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & Geist Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/main.css">
-  <!-- Theme Initializer (Prevents FOUC) -->
-  <script>
-    (function(){const t=localStorage.getItem('clubweb-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
-  </script>
 </head>
 
 <body>
 
   <div id="wrapper">
 
-    <!-- Meta Header Bar -->
+    <!-- Navigation Bar -->
     <nav id="nav" role="navigation" aria-label="Main Navigation">
       <div class="nav-container">
         <a href="index.html" class="nav-brand">
@@ -40,17 +38,14 @@
           </div>
         </a>
 
-        <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="nav-actions">
           <button class="nav-search-btn" id="open-command-palette" aria-label="Open Command Palette (Cmd+K)">
-            <i class="fas fa-search"></i>
+            <svg class="xai-icon" width="14" height="14" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <span class="nav-search-text">Search</span>
             <kbd class="nav-search-kbd">⌘K</kbd>
           </button>
-          <button class="nav-theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
           <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <i class="fas fa-bars"></i>
+            <svg class="xai-icon" width="16" height="16" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
         </div>
 
@@ -64,109 +59,153 @@
       </div>
     </nav>
 
-    <!-- Meta Header Banner -->
+    <!-- Hero Band -->
     <header class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1>About the Club</h1>
-          <p>A student-run organization at NTU bridging hardware design, fabrication technology, and software development.</p>
+          <span class="eyebrow-mono">// ABOUT THE ORGANIZATION</span>
+          <h1>Organization & Scope</h1>
+          <p>A student-run engineering club at NTU dedicated to silicon hardware architectures, foundry cleanroom fabrication, and high-performance computing systems.</p>
+          <div class="hero-actions">
+            <a href="join.html" class="btn btn-primary">Join Membership</a>
+            <a href="events.html" class="btn btn-secondary">Bulletin & Events</a>
+          </div>
         </div>
         <div class="hero-media">
-          <img src="images/industry.jpg" alt="Industry Collaboration" loading="lazy">
+          <img src="images/industry.jpg" alt="NTU Semiconductor Club industry collaboration event">
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Purpose Overview -->
+      <!-- Mission & Vision -->
       <section class="section">
+        <span class="eyebrow-mono">// MISSION &amp; OPERATIONAL FRAMEWORK</span>
         <div class="section-header">
-          <h2>What We Do</h2>
-          <p>We bring together students interested in microelectronics to learn through industry visits, technical workshops, and peer projects.</p>
+          <h2>Operational Focus</h2>
+          <p>Connecting students with commercial foundries, cleanrooms, and processor design teams.</p>
         </div>
 
         <div class="grid">
           <div class="card">
             <h3>Vision</h3>
-            <p>To give NTU students early exposure to hardware design, foundry operations, and high-performance computing.</p>
+            <p>Provide NTU students with direct access to hardware design flows, foundry operations, and high-throughput accelerator architectures.</p>
+            <div class="tags-cluster">
+              <span class="tag-mono">HARDWARE DESIGN</span>
+              <span class="tag-mono">FABRICATION EXPOSURE</span>
+            </div>
           </div>
 
           <div class="card">
             <h3>Mission</h3>
-            <p>To host cleanroom tours, industry site visits, hands-on workshops, and networking sessions with semiconductor companies.</p>
+            <p>Execute cleanroom tours, commercial fab visits, hands-on technical workshops, and engineering networking across Singapore.</p>
+            <div class="tags-cluster">
+              <span class="tag-mono">CLEANROOM TOURS</span>
+              <span class="tag-mono">FOUNDRY EXPEDITIONS</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Learning Pillars -->
+      <!-- Learning Pillars -->
+      <section class="section">
+        <span class="eyebrow-mono">// CURRICULUM ARCHITECTURE</span>
         <div class="section-header">
-          <h2>Core Learning Pillars</h2>
+          <h2>Technical Curriculum Pillars</h2>
+          <p>Four engineering tracks covering the complete semiconductor stack from transistor physics to kernel acceleration.</p>
         </div>
 
         <div class="grid">
           <div class="card">
             <h3>Industry Site Visits</h3>
-            <p>Tours of AMD, GlobalFoundries, A*STAR IME, and N2FC facilities to see real chip manufacturing and testing.</p>
-            <div class="astryx-layer-tags">
-              <span class="astryx-layer-tag"><i class="fas fa-building u-margin-right-sm"></i> AMD & GlobalFoundries</span>
-              <span class="astryx-layer-tag">A*STAR IME</span>
+            <p>Direct technical visits to AMD, GlobalFoundries, A*STAR IME, and N2FC facilities to study commercial production lines.</p>
+            <div class="tags-cluster">
+              <span class="tag-mono">
+                <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M9 22v-4h6v4"></path></svg>
+                AMD &amp; GLOBALFOUNDRIES
+              </span>
+              <span class="tag-mono">A*STAR IME</span>
             </div>
           </div>
 
           <div class="card">
             <h3>Cleanroom Access</h3>
-            <p>Hands-on cleanroom sessions at NTU N2FC covering photolithography, wafer processing, and metrology.</p>
-            <div class="astryx-layer-tags">
-              <span class="astryx-layer-tag"><i class="fas fa-mask u-margin-right-sm"></i> NTU N2FC</span>
-              <span class="astryx-layer-tag">Lithography & Metrology</span>
+            <p>Practical cleanroom sessions inside NTU N2FC covering wafer processing, ultraviolet photolithography, and metrology inspection tools.</p>
+            <div class="tags-cluster">
+              <span class="tag-mono">
+                <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                NTU N2FC
+              </span>
+              <span class="tag-mono">LITHOGRAPHY &amp; METROLOGY</span>
             </div>
           </div>
 
           <div class="card">
             <h3>Technical Workshops</h3>
-            <p>Practical sessions on EDA tools, embedded firmware, CUDA programming, and circuit design.</p>
-            <div class="astryx-layer-tags">
-              <span class="astryx-layer-tag"><i class="fas fa-code u-margin-right-sm"></i> CUDA GPU & AI</span>
-              <span class="astryx-layer-tag">EDA & Firmware</span>
+            <p>Practical sessions covering electronic design automation (EDA) tools, register-level firmware, CUDA GPU kernels, and digital synthesis.</p>
+            <div class="tags-cluster">
+              <span class="tag-mono">
+                <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                CUDA GPU ACCELERATION
+              </span>
+              <span class="tag-mono">EDA &amp; FIRMWARE</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Networking & Careers</h3>
-            <p>Coffee chats, career panels, and connections with engineers from the semiconductor industry.</p>
-            <div class="astryx-layer-tags">
-              <span class="astryx-layer-tag"><i class="fas fa-handshake u-margin-right-sm"></i> AISG AIIP/AIAP</span>
-              <span class="astryx-layer-tag">Industry Mentorship</span>
+            <h3>Engineering Career Pathways</h3>
+            <p>Technical panels, career discussions, and mentorship channels with practicing semiconductor and systems engineers in Singapore.</p>
+            <div class="tags-cluster">
+              <span class="tag-mono">
+                <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path></svg>
+                AISG AIIP/AIAP
+              </span>
+              <span class="tag-mono">INDUSTRY MENTORSHIP</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Join CTA Section -->
+      <!-- Enrollment CTA -->
       <section class="section">
-        <div class="card cta-card">
-          <h2>Explore Full-Stack Semiconductor Engineering</h2>
-          <p>Join NTU Semiconductor Club and start building skills across chip design, fabrication, and GPU/AI applications.</p>
-          <div class="cta-card-actions">
-            <a href="join.html" class="btn">Join Membership</a>
+        <span class="eyebrow-mono">// MEMBERSHIP REGISTRATION</span>
+        <div class="card" style="padding: 40px;">
+          <h2 style="font-size: 32px; margin-bottom: 12px;">Explore Full-Stack Semiconductor Engineering</h2>
+          <p style="max-width: 680px; margin-bottom: 24px;">Enroll in the club to participate in upcoming fab tours, technical lab sessions, and chip design workshops.</p>
+          <div class="hero-actions">
+            <a href="join.html" class="btn btn-primary">Join Membership</a>
+            <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg class="xai-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              Telegram Community
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Meta Footer -->
+    <!-- Footer -->
     <footer>
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="NTU Semiconductor Club Logo" class="footer-brand-img">
+          <img src="images/logo.png" alt="NTU Semiconductor Club Logo">
           <span>NTU Semiconductor Club</span>
         </div>
         <div class="footer-links">
-          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-telegram icon-telegram"></i> Telegram</a>
-          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fa-brands fa-linkedin icon-linkedin"></i> LinkedIn</a>
-          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm"><i class="fa-regular fa-envelope"></i> Email</a>
+          <a href="https://t.me/+Wsb5No5hvnxlMjRl" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            Telegram
+          </a>
+          <a href="https://www.linkedin.com/company/ntu-semiconductor-club/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.07v8.37h2.78z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:ntu.semiconductor.club@ntu.edu.sg" class="btn btn-secondary btn-sm">
+            <svg class="xai-icon" width="13" height="13" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            Email
+          </a>
         </div>
         <div class="footer-copy">
-          &copy; 2026 NTU Semiconductor Club. Nanyang Technological University, Singapore.
+          &copy; 2026 NTU SEMICONDUCTOR CLUB &bull; NANYANG TECHNOLOGICAL UNIVERSITY, SINGAPORE
         </div>
       </div>
     </footer>
