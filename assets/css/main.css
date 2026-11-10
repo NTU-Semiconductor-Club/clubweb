@@ -88,6 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 #wrapper {
@@ -144,29 +145,29 @@ h1, h2, h3, h4, h5, h6 {
 
 /* display-xl: Hero scale */
 .display-xl, h1 {
-  font-size: clamp(40px, 7vw, 96px);
-  line-height: clamp(44px, 7.5vw, 96px);
+  font-size: clamp(32px, 7vw, 96px);
+  line-height: clamp(36px, 7.5vw, 96px);
   letter-spacing: -0.03em;
 }
 
 /* display-lg: Sub-hero */
 .display-lg {
-  font-size: clamp(34px, 5vw, 72px);
-  line-height: clamp(38px, 5.5vw, 72px);
+  font-size: clamp(28px, 5vw, 72px);
+  line-height: clamp(32px, 5.5vw, 72px);
   letter-spacing: -0.025em;
 }
 
 /* display-md: Section headers */
 .display-md, h2 {
-  font-size: clamp(28px, 3.8vw, 48px);
-  line-height: clamp(32px, 4.2vw, 48px);
+  font-size: clamp(24px, 3.8vw, 48px);
+  line-height: clamp(28px, 4.2vw, 48px);
   letter-spacing: -0.02em;
 }
 
 /* display-sm: Card clusters */
 .display-sm, h3 {
-  font-size: clamp(20px, 2.4vw, 32px);
-  line-height: clamp(26px, 2.8vw, 36px);
+  font-size: clamp(19px, 2.4vw, 32px);
+  line-height: clamp(25px, 2.8vw, 36px);
   letter-spacing: -0.015em;
 }
 
@@ -244,6 +245,13 @@ p {
   transition: all 0.15s ease;
   white-space: nowrap;
   text-align: center;
+  max-width: 100%;
+}
+
+a[href^="mailto:"].btn {
+  white-space: normal;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .btn:hover {
@@ -432,7 +440,9 @@ p {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: 6px 14px;
+  padding: 8px 14px;
+  min-height: 40px;
+  box-sizing: border-box;
   border-radius: var(--rounded-pill);
   background-color: var(--color-canvas-soft);
   border: 1px solid var(--color-hairline);
@@ -489,8 +499,10 @@ p {
 
 .mobile-toggle {
   display: none;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   background-color: var(--color-canvas-card);
@@ -498,11 +510,45 @@ p {
   color: var(--color-body);
   border-radius: var(--rounded-pill);
   cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.mobile-toggle:hover {
+  color: var(--color-ink);
+  border-color: var(--color-border-pill);
+  background-color: var(--color-canvas-soft);
 }
 
 @media (max-width: 860px) {
   .mobile-toggle {
     display: inline-flex;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 10px 20px;
+  }
+
+  .btn-sm {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .filter-pill {
+    min-height: 42px;
+    padding: 9px 16px;
+  }
+
+  .nav-search-btn {
+    min-height: 40px;
+    padding: 8px 14px;
   }
 
   #nav ul {
@@ -511,11 +557,14 @@ p {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background-color: var(--color-canvas);
+    background-color: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-hairline);
     flex-direction: column;
     padding: var(--spacing-lg);
     gap: var(--spacing-sm);
+    box-shadow: none !important;
   }
 
   #nav ul.show {
@@ -527,9 +576,13 @@ p {
   }
 
   #nav ul li a {
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 10px 16px;
+    min-height: 44px;
+    padding: 12px 18px;
+    font-size: 15px;
+    border-radius: var(--rounded-pill);
   }
 }
 
@@ -1038,7 +1091,7 @@ p {
   outline: none;
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -1180,4 +1233,278 @@ footer {
   letter-spacing: 0.8px;
   color: var(--color-mute);
   margin-top: var(--spacing-sm);
+}
+
+/* ==========================================================================
+   MOBILE UX & RESPONSIVE OPTIMIZATION (< 640px and < 480px)
+   WCAG 44x44px touch targets, iOS Safari zoom prevention, bottom sheets,
+   fluid typography, and edge-to-edge layout restraint.
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  /* --- 1. Navigation Bar --- */
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .nav-search-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    justify-content: center;
+    border-radius: var(--rounded-pill);
+    flex-shrink: 0;
+  }
+
+  .nav-search-text,
+  .nav-search-kbd {
+    display: none;
+  }
+
+  /* --- 2. Sections, Hero & Container Spacing --- */
+  .section {
+    padding: 40px 16px;
+  }
+
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
+  .step-card {
+    padding: 20px 16px;
+  }
+
+  .person-card {
+    padding: 24px 16px;
+  }
+
+  .event-card-body {
+    padding: 20px 16px;
+  }
+
+  .featured-event-body {
+    padding: 20px 16px;
+  }
+
+  .featured-event-body h3 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .stats-row {
+    padding: 16px 0;
+  }
+
+  .stat-item {
+    padding: 12px 16px;
+  }
+
+  /* --- 3. Touch Targets (WCAG 44x44px) --- */
+  .btn {
+    min-height: 44px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  .btn-sm {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .filter-pill {
+    padding: 10px 16px;
+    font-size: 13px;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+
+  .hero-actions .btn {
+    min-height: 44px;
+    padding: 10px 20px;
+  }
+
+  .footer-links .btn {
+    min-height: 40px;
+  }
+
+  .faq-trigger {
+    padding: 18px 0;
+    min-height: 48px;
+  }
+
+  /* --- 4. Popover Bottom Sheet Modal --- */
+  .popover-layer {
+    left: 16px !important;
+    right: 16px !important;
+    top: auto !important;
+    bottom: 24px !important;
+    width: auto !important;
+    max-width: none !important;
+    z-index: 2100;
+  }
+
+  /* --- 5. Inputs & Command Palette Modal --- */
+  .cmd-backdrop {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .cmd-dialog {
+    max-width: 100%;
+  }
+
+  .cmd-input {
+    font-size: 16px;
+  }
+
+  /* --- 6. Toast Notifications on Mobile --- */
+  #toast-container {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    align-items: center;
+  }
+
+  .toast {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  /* --- 7. Footer --- */
+  footer {
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hide verbose brand subtitle on narrow phone viewports */
+  .nav-brand-sub {
+    display: none;
+  }
+
+  .nav-brand-title {
+    font-size: 13.5px;
+    letter-spacing: -0.2px;
+  }
+
+  /* Full-width action pills for effortless mobile tapping */
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .btn {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .btn-sm {
+    min-height: 40px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .filter-bar {
+    gap: 8px;
+  }
+
+  .filter-pill {
+    min-height: 42px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  /* Fluid Display Typography with Word Wrapping Containment */
+  .display-xl, h1 {
+    font-size: clamp(28px, 8.5vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .display-lg {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+  }
+
+  .display-md, h2 {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+  }
+
+  .display-sm, h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  p, .card p, .featured-event-body p, .event-card-body p {
+    font-size: 14px;
+    line-height: 22px;
+    overflow-wrap: break-word;
+  }
+
+  .section {
+    padding: 32px 14px;
+  }
+
+  .hero {
+    padding: 32px 14px;
+  }
+
+  .card, .step-card, .person-card {
+    padding: 18px 14px;
+  }
+
+  .person-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .stat-number {
+    font-size: 30px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .popover-layer {
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+  }
+
+  .footer-links {
+    gap: 8px;
+  }
+
+  .footer-links .btn {
+    min-height: 40px;
+  }
 }

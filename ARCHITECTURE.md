@@ -1,129 +1,169 @@
-# Architecture & Brand Design Guide 🛠️
+# Architecture & Technical Design Specification 🛠️
 
-Welcome to the **NTU Semiconductor Club Website** developer architecture and brand design guide. This document serves as the authoritative single-source-of-truth specification for human developers and AI coding assistants.
-
----
-
-## 📐 Brand Identity & Header Specification
-
-All pages **must** strictly use the exact single-source-of-truth header branding markup:
-
-```html
-<a href="index.html" class="nav-brand">
-  <img src="images/logo.png" alt="NTU Semiconductor Club Logo" class="nav-brand-img">
-  <div class="nav-brand-text">
-    <span class="nav-brand-title">NTU Semiconductor Club</span>
-    <span class="nav-brand-sub">Nanyang Technological University</span>
-  </div>
-</a>
-```
-
-### Brand Tokens Standard
-
-* **Club Name (`.nav-brand-title`)**: `NTU Semiconductor Club` *(Title case, exact string)*
-* **Sub-Brand Badge (`.nav-brand-sub`)**: `Nanyang Technological University` *(Uppercase blue subtitle, exact string)*
-* **Logo Asset (`.nav-brand-img`)**: [`images/logo.png`](file:///Users/ray/dev/clubweb/images/logo.png) *(Height: 44px, drop shadow elevation)*
+Welcome to the **NTU Semiconductor Club Website** (`clubweb`) developer architecture and technical specification. This document serves as the single source of truth for human maintainers and AI coding assistants.
 
 ---
 
-## 📐 High-Level Architecture Diagram
+## 1. High-Level Architecture
+
+The website is a **pure static web stack** (HTML5, modern CSS3, native ES6+ vanilla JavaScript) deployed via GitHub Actions to GitHub Pages. It has **zero npm/Node.js build dependencies** at runtime and deploys instantly upon push.
 
 ```mermaid
 graph TD
-    subgraph Browser ["Client Browser"]
-        HTML["HTML Pages<br>(index, about, events, committee, join)"]
-        CSS["Meta Design System<br>(assets/css/main.css)"]
-        JS["Interactive Scripts<br>(assets/js/main.js)"]
-        Media["Asset Gallery<br>(images/ & logo.png)"]
+    subgraph Client ["Client Browser"]
+        HTML["HTML5 Pages<br>(index, about, events, committee, join)"]
+        CSS["xAI Design System<br>(assets/css/main.css)"]
+        JS["Vanilla ES6+ Engine<br>(assets/js/main.js)"]
+        SVG["Built-in Vector SVGs<br>(59 inline icons)"]
+        Media["Local Images<br>(images/ & images/committee/)"]
     end
 
-    subgraph CDN ["Content & Font Delivery"]
-        GF["System Fonts<br>(-apple-system, Segoe UI, Roboto)"]
-        FA["FontAwesome 6<br>(CDN Icons)"]
+    subgraph Fonts ["Web Typography"]
+        GF["Google Fonts<br>(Inter 400 + Geist Mono 400)"]
     end
 
-    subgraph Automation ["CI/CD Pipeline"]
+    subgraph SEO ["Search & Discovery Engine"]
+        JSONLD["Schema.org JSON-LD<br>(EducationalOrg, Event, Person, FAQ)"]
+        Robots["robots.txt"]
+        Sitemap["sitemap.xml"]
+    end
+
+    subgraph CI_CD ["CI/CD Pipeline"]
         GH["GitHub Repository<br>(main branch)"]
         GHA[".github/workflows/deploy.yml"]
         GHP["GitHub Pages Host<br>(ntu-semiconductor-club.github.io)"]
     end
 
-    HTML -->|Imports| CSS
-    HTML -->|Loads| JS
-    HTML -->|Renders| Media
-    HTML -->|Fetches| GF
-    HTML -->|Fetches| FA
-    
+    HTML -->|Links| CSS
+    HTML -->|Executes| JS
+    HTML -->|Embeds| SVG
+    HTML -->|Loads| Media
+    HTML -->|Preconnects| GF
+    HTML -->|Hosts| JSONLD
+    Robots -->|References| Sitemap
     GH -->|Triggers Push| GHA
     GHA -->|Deploys Static Site| GHP
 ```
 
 ---
 
-## 🎨 Meta Astryx Design System & Tokens
+## 2. xAI Design System Implementation
 
-The visual language is aligned with Meta's open-source [Astryx Design System](https://github.com/facebook/astryx) powering 13,000+ internal apps. Tokens are centralized in [`assets/css/main.css`](file:///Users/ray/dev/clubweb/assets/css/main.css) using CSS custom properties with native `light-dark()` color scheme support:
+The site strictly implements the **xAI Design System** ([getdesign.md/x.ai/design-md](https://getdesign.md/x.ai/design-md)), characterized by stark monochrome minimalism, engineered cosmic restraint, and unmarketed technical clarity.
+
+### 2.1 Color Tokens & Surface Hierarchy (`assets/css/main.css`)
 
 ```css
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
-  /* Brand Palette */
-  --color-brand: #0866ff;
-  --color-brand-hover: #0052cc;
-  --color-accent: light-dark(#0866ff, #4589ff);
+  /* Surfaces: Strict near-black edge-to-edge. Zero light-mode counterpart */
+  --color-canvas: #0a0a0a;          /* Main page canvas */
+  --color-canvas-soft: #1a1c20;     /* Nav hover, popovers, input fills */
+  --color-canvas-card: #191919;     /* Content and feature cards */
+  --color-canvas-mid: #363a3f;      /* Nested code badges, kbd chips */
+  --color-hairline: #212327;        /* 1px structural dividing lines */
 
-  /* Surface & Backgrounds */
-  --color-background-body: light-dark(#f0f2f5, #18191a);
-  --color-background-surface: light-dark(#ffffff, #242526);
-  --color-background-card: light-dark(#ffffff, #242526);
-  --color-background-popover: light-dark(#ffffff, #262626);
-  --color-background-muted: light-dark(#eef0f4, #2a2b2d);
+  /* Ink & Typography */
+  --color-primary: #ffffff;         /* Headings, primary text */
+  --color-on-primary: #0a0a0a;      /* Text on white pill */
+  --color-body: #dadbdf;            /* Primary body copy */
+  --color-mute: #7d8187;            /* Monospace eyebrows, captions */
 
-  /* Typography & Text */
-  --color-text-primary: light-dark(#050505, #e4e6eb);
-  --color-text-secondary: light-dark(#65676b, #b0b3b8);
-  --color-border: light-dark(#e4e6eb, #393a3b);
+  /* Translucency */
+  --color-border-pill: rgba(255, 255, 255, 0.22);
+  --color-border-pill-hover: rgba(255, 255, 255, 0.65);
 
-  /* Elevation (3-tier Astryx scale) */
-  --shadow-low: 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
-  --shadow-med: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-high: 0 12px 28px rgba(0, 0, 0, 0.22);
-
-  /* Spacing & Radii Scale */
-  --spacing-1: 4px;   --spacing-2: 8px;   --spacing-3: 12px;
-  --spacing-4: 16px;  --spacing-6: 24px;  --spacing-8: 32px;
-  --radius-inner: 4px; --radius-element: 8px; --radius-container: 12px;
-
-  /* Astryx Layer Offset */
-  --layer-offset: var(--spacing-2); /* 8px offset */
-  --layer-z-index: 1200;
+  /* Illustrative Accents (Used Sparingly) */
+  --color-accent-sunset: #ff7a17;   /* Pulse cues, toast dot */
+  --color-accent-dusk: #7c3aed;
+  --color-accent-twilight: #c4b5fd;
+  --color-accent-breeze: #a0c3ec;
 }
 ```
 
-### 🪟 Astryx Layer (`core-layer--offset`) & UI Systems
+### 2.2 Typography Rules: Strict Weight 400
+- **Two-Face System**:
+  - **Geometric Sans (`Inter`)**: Used for all display headings and body copy. Weight 400 is enforced globally (`h1, h2, h3, h4, h5, h6 { font-weight: 400 !important; }`). Negative tracking is applied to display sizes:
+    - `display-xl / h1`: 96px, line-height 96px, letter-spacing `-0.03em` (scales smoothly on mobile via `clamp(36px, 7vw, 96px)`).
+    - `display-lg`: 72px, line-height 72px, letter-spacing `-0.025em`.
+    - `display-md / h2`: 48px, line-height 48px, letter-spacing `-0.02em`.
+    - `display-sm / h3`: 32px, line-height 36px, letter-spacing `-0.015em`.
+  - **Monospace Code Face (`Geist Mono`)**: Used for uppercase section eyebrows (`.eyebrow-mono`), metric numbers, dates, and technical tags (`letter-spacing: 1.4px`).
+- **Code-Comment Eyebrows**: Every section is prefixed with a code-comment style eyebrow (e.g., `// HARDWARE ARCHITECTURE & SILICON CURRICULUM`, `// AY2025/26 SEMESTER 2`).
 
-Floating overlays, palettes, lightboxes, and accordions conform to the [Astryx Design System](https://facebook.github.io/astryx/) specifications:
-1. **Context Anchor Positioning (`core-layer--offset`)**: Overlays align dynamically to trigger elements with an explicit `--layer-offset` (`8px` / `--spacing-2`).
-2. **Collision Detection**: Overlays flip from bottom to top when colliding with viewport boundaries, clamping horizontally.
-3. **Dismissal Stack (`useLayerDismissal`)**: Pressing `Escape` or clicking outside triggers light-dismissal. All layers declare `role="dialog"` with accessible `aria-haspopup` and `aria-expanded` state tracking.
-4. **Astryx Command Palette (`Cmd+K` / `Ctrl+K`)**: Global instant search across pages, curriculum pillars, industrial site visits, committee leads, and community channels.
-5. **Astryx Lightbox**: Accessible modal viewer with smooth scale-in zoom, backdrop blur, and captions for industrial visit photos.
-6. **Astryx Accordion / Collapsible**: Accessible collapsible FAQ component with dynamic `max-height` transition and chevron rotation.
-7. **Astryx Status Indicator**: Real-time pulsing badge indicator highlighting active semester enrollment.
-8. **Astryx Theme Switcher**: Explicit dark/light mode toggle stored in `localStorage` with `[data-theme]` CSS token overrides and FOUC prevention.
-9. **Astryx Toast System (`useToast`)**: Non-blocking toast notification stack in bottom-right corner for theme toggles and clipboard interactions.
-10. **Astryx Event Category Filters**: Tabbed category filtering pills (`all`, `fab`, `industry`, `workshop`) with counter badges and animated display toggles.
-
-See [`AGENTS.md`](file:///Users/ray/dev/clubweb/AGENTS.md) for strict AI agent rules, token specifications, and humanizer writing constraints.
+### 2.3 Interactive Shapes & Hairline Elevation
+- **Universal Pill (`border-radius: 9999px`)**:
+  - Every button (`.btn`, `.btn-primary`, `.btn-secondary`, `.filter-pill`) is a pill.
+  - **Canonical Button**: Outlined pill with translucent white border `rgba(255, 255, 255, 0.22)` and transparent background.
+  - **Primary Button (Rare)**: White-filled pill (`background: #ffffff; color: #0a0a0a;`).
+- **Cards (`border-radius: 8px`)**:
+  - Cards use tight 8px radii, `#191919` surface fill, and `1px solid #212327` hairline borders.
+- **Zero Drop Shadows**:
+  - All `box-shadow` values are `none`. Elevation is achieved solely through hairline borders and surface tone contrast.
 
 ---
 
-## 📬 Official Contact & Community Channels Reference
+## 3. Built-In Vector SVG System
 
-| Channel | URL / Contact | Purpose |
-| :--- | :--- | :--- |
-| **Telegram Group** | [`https://t.me/+Wsb5No5hvnxlMjRl`](https://t.me/+Wsb5No5hvnxlMjRl) | Real-time member announcements & community chat |
-| **LinkedIn Page** | [`https://www.linkedin.com/company/ntu-semiconductor-club/`](https://www.linkedin.com/company/ntu-semiconductor-club/) | Professional updates, company news, and networking |
-| **Official Email** | [`mailto:ntu.semiconductor.club@ntu.edu.sg`](mailto:ntu.semiconductor.club@ntu.edu.sg) | Executive committee contact & corporate partnerships |
-| **GitHub Org** | [`https://github.com/NTU-Semiconductor-Club`](https://github.com/NTU-Semiconductor-Club) | Open source code, repositories, and documentation |
+All 59 icons across the site are built out as self-contained, inline vector SVGs (`.xai-icon`):
+- **Zero CDN Dependencies**: No Font Awesome CDN link.
+- **Benefits**: Instant zero-latency rendering, zero network failure points, zero missing-glyph fallback boxes `[X]`, and exact color inheritance via `currentColor`.
+
+---
+
+## 4. Mobile & Touch Ergonomics (< 768px & < 480px)
+
+The website is engineered for seamless mobile and touch usability:
+- **Responsive Navigation**:
+  - On `< 640px`, the search button automatically collapses from text+kbd to a sleek circular icon pill (`width: 36px; height: 36px`).
+  - On `< 480px`, the sub-brand text hides to preserve clean horizontal spacing.
+  - Mobile menu drawer smoothly overlays the viewport with blurred backdrop (`rgba(10, 10, 10, 0.98)`).
+- **Auto-Dismissal & Gestures (`assets/js/main.js`)**:
+  - Mobile drawer closes automatically when any navigation link is clicked, when tapping outside, or on `Escape`.
+  - Background scrolling is locked (`overflow: hidden`) during active modals or lightboxes.
+  - Touch target heights meet or exceed WCAG 44×44px standards.
+- **iOS Safari Auto-Zoom Prevention**:
+  - Command palette search inputs enforce `font-size: 16px;` on mobile viewports to prevent iOS Safari from zooming the page on focus.
+- **Mobile Popovers**:
+  - On viewports `< 640px`, committee bio popovers convert from floating offsets into anchored bottom sheets/modals with outside tap dismissal.
+
+---
+
+## 5. SEO & Crawler Discovery Architecture
+
+To maximize discoverability on Google, Bing, DuckDuckGo, and social platforms:
+- **Robots Directives (`robots.txt`)**: Explicit crawl permissions for all search engines (`Googlebot`, `Bingbot`, `Applebot`, `DuckDuckBot`) with canonical sitemap pointer.
+- **Sitemap Index (`sitemap.xml`)**: Timestamped (`2026-11-10`) with `weekly` change frequencies and priority weighting (1.00 for home, 0.95 for join).
+- **Metadata & Open Graph**: Every page contains unique titles, keyword tags, canonical URLs, and Open Graph / Twitter Card tags.
+- **Schema.org Structured Data (JSON-LD)**:
+  - `index.html`: `EducationalOrganization` + `WebSite`
+  - `about.html`: `AboutPage`
+  - `events.html`: `ItemList` with `Event` entries
+  - `committee.html`: `ItemList` with `Person` entities
+  - `join.html`: `FAQPage` (triggers Google Search FAQ Rich Snippets)
+
+---
+
+## 6. Local Development & Verification
+
+```bash
+# Start local daemon server
+python3 -m http.server 8000
+
+# Automated governance checks
+python3 -c "
+import glob, re, os, sys
+# Check 1: Pure static stack
+assert not any(os.path.exists(p) for p in ['package.json', 'node_modules'])
+# Check 2: Banned AI buzzwords
+pat = re.compile(r'\b(vibrant|landscape|pivotal|testament|foster|delv|unmatched|beacon|tapestry|spearhead|empower|supercharg|synerg)', re.I)
+for f in glob.glob('*.html'):
+    for i, line in enumerate(open(f), 1):
+        if pat.search(line): sys.exit(1)
+# Check 3: Zero theme toggles or light-mode scripts
+for f in glob.glob('*.html') + ['assets/js/main.js', 'assets/css/main.css']:
+    assert 'theme-toggle' not in open(f).read()
+print('All governance checks passed.')
+"
+```

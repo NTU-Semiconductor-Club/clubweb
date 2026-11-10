@@ -1,120 +1,75 @@
 # NTU Semiconductor Club Website ⚡
 
-[![NTU Semiconductor Club](https://img.shields.io/badge/NTU-Semiconductor_Club-0866ff?style=for-the-badge&logo=microchip&logoColor=white)](https://ntu-semiconductor-club.github.io/clubweb)
-[![Telegram Group](https://img.shields.io/badge/Telegram-Join_Community-24A1DE?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+Wsb5No5hvnxlMjRl)
-[![LinkedIn Company](https://img.shields.io/badge/LinkedIn-Follow_Page-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/ntu-semiconductor-club/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![NTU Semiconductor Club](https://img.shields.io/badge/NTU-Semiconductor_Club-0a0a0a?style=for-the-badge&logo=microchip&logoColor=white&labelColor=212327)](https://ntu-semiconductor-club.github.io/clubweb)
+[![Design: xAI](https://img.shields.io/badge/Design_System-xAI-ff7a17?style=for-the-badge&labelColor=0a0a0a)](https://getdesign.md/x.ai/design-md)
+[![Telegram](https://img.shields.io/badge/Telegram-Community-white?style=for-the-badge&logo=telegram&logoColor=black&labelColor=212327)](https://t.me/+Wsb5No5hvnxlMjRl)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow-0a0a0a?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=212327)](https://www.linkedin.com/company/ntu-semiconductor-club/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-white.svg?style=for-the-badge&labelColor=212327)](LICENSE)
 
 Official web portal and repository for the **NTU Semiconductor Club** at Nanyang Technological University (NTU), Singapore.
 
----
-
-## 🔬 The "Full-Stack" Semiconductor Vision
-
-The NTU Semiconductor Club is an interdisciplinary student organization educating and preparing NTU students across the **complete semiconductor value chain**:
-
-1. 🎨 **IC Design & Architecture**: Circuit design, VLSI logic, digital/analog layout, and processor architectures (CPUs, GPUs, accelerators).
-2. 🏭 **Fabrication & Cleanroom Operations**: Wafer fab processes, lithography, thin films, cleanroom protocols, and advanced packaging.
-3. 💻 **Embedded & RTOS Firmware**: Microcontroller programming, embedded C/C++, hardware-software co-design, and sensor interfaces.
-4. 🧠 **GPU Parallel Computing & AI Hardware**: CUDA GPU programming, AI model acceleration, and partnerships with AI Singapore (AISG).
+Built with the **xAI Design System** ([getdesign.md/x.ai/design-md](https://getdesign.md/x.ai/design-md)) featuring a stark monochrome near-black `#0a0a0a` canvas, regular weight 400 typography, universal outline pills, built-in vector SVGs, mobile touch ergonomics, and comprehensive SEO structured data.
 
 ---
 
-## 📰 AY2025/26 Semester 2 Semicon Bulletin & Events
+## 🔬 Full-Stack Semiconductor Curriculum
 
-| Date | Event / Activity | Details & Partner |
+The NTU Semiconductor Club educates and prepares NTU students across the complete silicon value chain:
+
+1. **IC Design & VLSI Logic**: Digital logic, analog circuits, RTL architecture, and EDA synthesis tools.
+2. **Cleanroom Fabrication & Testing**: Photolithography, thin-film deposition, wafer processing, and metrology at NTU NanoFabrication Centre (N2FC).
+3. **Embedded & RTOS Firmware**: Microcontroller architectures, register-level C/C++ drivers, and real-time execution.
+4. **GPU Computing & Acceleration**: CUDA architecture, kernel profiling, and high-performance computing pipelines with AI Singapore (AISG).
+
+---
+
+## 📰 AY2025/26 Semester 2 Semicon Bulletin & Expeditions
+
+| Date | Expedition / Event | Host / Partner | Scope |
+| :--- | :--- | :--- | :--- |
+| **22 Jan 2026** | **AI Career Launch Pad** | AI Singapore (AISG) | Systems and hardware fundamentals for AI careers (AIIP/AIAP). |
+| **26 Jan & 23 Feb 2026** | **N2FC Cleanroom Fab Tours** | NTU N2FC | Photolithography and wafer processing inside cleanroom lines. |
+| **6 Feb 2026** | **AMD Singapore Industry Visit** | AMD Singapore | System Level Test (SLT), Failure Analysis, and processor bring-up. |
+| **10 Feb 2026** | **A*STAR IME Industry Visit** | A*STAR IME | Advanced packaging, microelectronics research, and silicon photonics. |
+| **AY2025/26** | **GlobalFoundries Visit** | GlobalFoundries | Commercial wafer fabrication lines and yield engineering. |
+| **2 Apr 2026** | **Networking Coffee Chat** | NTU Campus | Informal career discussions and engineer mentorship. |
+
+---
+
+## 👥 Executive Leadership
+
+| Name | Role | Responsibilities |
 | :--- | :--- | :--- |
-| **22 Jan 2026** | **AI Career Launch Pad** | Session bridging hardware/systems fundamentals with AI careers, partnered with **AI Singapore (AISG)**. Introduced students to AIIP & AIAP programs. |
-| **26 Jan & 23 Feb 2026** | **N2FC Cleanroom Fab Tours** | Back-to-back cleanroom visits at Nanyang NanoFabrication Centre (N2FC) observing silicon processing and wafer fab equipment. |
-| **25 Feb 2026** | **AMD Industry Visit** | Toured AMD Singapore's testing and validation facilities, observing System Level Test (SLT), Final Test, Failure Analysis, and chip bring-up. |
-| **27 Mar 2026** | **A*STAR IME Industry Visit** | Toured semiconductor R&D facilities at A*STAR Institute of Microelectronics, exploring packaging research and photonics labs. |
-| **2 Apr 2026** | **Networking Coffee Chat** | Informal student-industry coffee chat connecting members with microelectronics engineers and gathering event feedback. |
+| **Ray** | President | Overall curriculum design, strategy, and foundry partnerships |
+| **Rishabh** | Vice President (Internal) | Operations, safety orientations, and registration logistics |
+| **Roland** | Vice President (External) | Corporate relations and industry visit coordination |
+| **Bryan** | Events Director | Cleanroom tours, plant visits, and technical workshops |
+| **Pranav** | Sponsorships Director | Corporate outreach, sponsorships, and internship pipelines |
+| **Srishti** | Publicity Director | Technical publications, Semicon Bulletin, and branding |
 
 ---
 
-## 👥 Executive Leadership Team
+## 🛠️ Design System & Technical Specifications
 
-| Name | Executive Role | Focus Area |
-| :--- | :--- | :--- |
-| **Ray** | President | Overall Direction, External Alignment & Full-Stack Vision |
-| **Rishabh** | Vice President (Internal) | Operations, Membership & Campus Collaboration |
-| **Roland** | Vice President (External) | Corporate Partnerships & Industry Relations |
-| **Bryan** | Events Lead | Plant Tours, Cleanroom Visits & Technical Workshops |
-| **Pranav** | Business Development Lead | Sponsorships, Corporate Outreach & Industry Growth |
-| **Srishti** | Publicity Lead | Media Branding, Social Channels & Communications |
+- **Design System**: xAI Design System ([xai_design_spec.md](xai_design_spec.md))
+- **Colors**: Canvas `#0a0a0a`, Cards `#191919`, Hairlines `#212327`, Ink `#ffffff`, Body `#dadbdf`, Sunset Accent `#ff7a17`.
+- **Typography**: Inter (Universal Sans substitute) at weight 400 with negative tracking; Geist Mono for code eyebrows (`// ...`).
+- **Icons**: 59 built-in scalable vector SVGs (`.xai-icon`). Zero external CDN dependencies.
+- **Mobile Ergonomics**: Breakpoints for `< 860px`, `< 640px`, and `< 480px`. Touch target heights >= 44px. iOS auto-zoom prevention.
+- **SEO & Discoverability**: Schema.org JSON-LD structured data on all pages, full Open Graph / Twitter Cards, `robots.txt`, and XML sitemap.
+- **Pure Static Stack**: Pure HTML5, CSS3, ES6+ vanilla JavaScript. Zero npm/Node.js dependencies.
 
----
-
-## 🌐 Key Web Portal Pages
-
-* **[Home (`index.html`)](https://ntu-semiconductor-club.github.io/clubweb)**: Hero overview, impact stats (400+ students, 10+ partners), core pillars, and featured site visits.
-* **[About (`about.html`)](https://ntu-semiconductor-club.github.io/clubweb/about.html)**: Club purpose, vision, mission, and learning paradigm.
-* **[Events (`events.html`)](https://ntu-semiconductor-club.github.io/clubweb/events.html)**: Semicon Bulletin AY2025/26 Semester 2 highlights, foundry tours, and workshop series.
-* **[Committee (`committee.html`)](https://ntu-semiconductor-club.github.io/clubweb/committee.html)**: Meta-style profile cards for executive committee members and portfolio leads.
-* **[Join & Contact (`join.html`)](https://ntu-semiconductor-club.github.io/clubweb/join.html)**: Official communication channels, membership registration steps, discipline eligibility, and FAQ.
+For detailed developer specifications, see [ARCHITECTURE.md](ARCHITECTURE.md) and [AGENTS.md](AGENTS.md).
 
 ---
 
-## 📁 Repository Structure
+## 🌐 Live Web Portal Endpoints
 
-```text
-.
-├── index.html              # Home landing page
-├── about.html              # About Us & Full-Stack Vision
-├── events.html             # Club activities, site visits & workshops
-├── committee.html          # Executive leadership team
-├── join.html               # Combined Join Us & Contact Us page (All official links)
-├── ARCHITECTURE.md         # Architecture diagrams, design system tokens, and vibe coding guide
-├── CONTRIBUTING.md         # Humanizer style rules & AI agent guidelines
-├── PROFILE_README.md       # GitHub Organization Profile README template
-├── .nojekyll               # Disables Jekyll processing on GitHub Pages
-├── robots.txt              # Search engine directives
-├── sitemap.xml             # XML sitemap for SEO
-├── assets/
-│   ├── css/
-│   │   └── main.css        # Meta Design System stylesheet (Light/Dark mode)
-│   └── js/
-│       └── main.js         # Navigation scroll, active links, and mobile drawer scripts
-└── images/                 # All real original image assets
-    ├── logo.png            # Official Lion Club Logo
-    ├── amd.jpg             # AMD Singapore Visit photo
-    ├── n2fc.jpg            # N2FC Cleanroom Tour photo
-    ├── ime.jpg             # A*STAR IME Visit photo
-    ├── globalfoundries.jpg # GlobalFoundries Visit photo
-    ├── networking.jpg      # Networking Coffee Chat photo
-    ├── career.jpg          # AI Career Launch Pad photo
-    ├── hero.jpg            # Hero banner photo
-    └── committee/          # Executive committee headshots
-```
-
----
-
-## 🛠️ Local Development & Preview
-
-To preview the website locally:
-
-```bash
-# Clone the repository
-git clone https://github.com/NTU-Semiconductor-Club/clubweb.git
-cd clubweb
-
-# Start local HTTP server
-python3 -m http.server 8000
-```
-Then open `http://localhost:8000` in your browser.
-
----
-
-## 📬 Official Community & Contact Channels
-
-* ✈️ **Telegram Group**: [https://t.me/+Wsb5No5hvnxlMjRl](https://t.me/+Wsb5No5hvnxlMjRl)
-* 💼 **LinkedIn Page**: [https://www.linkedin.com/company/ntu-semiconductor-club/](https://www.linkedin.com/company/ntu-semiconductor-club/)
-* 🌐 **Official Web Portal**: [https://ntu-semiconductor-club.github.io/clubweb](https://ntu-semiconductor-club.github.io/clubweb)
-* 📧 **Official Email**: [ntu.semiconductor.club@ntu.edu.sg](mailto:ntu.semiconductor.club@ntu.edu.sg)
-* 📍 **Location**: Nanyang Technological University (NTU), 50 Nanyang Ave, Singapore 639798
+* **Production (GitHub Pages)**: [https://ntu-semiconductor-club.github.io/clubweb/](https://ntu-semiconductor-club.github.io/clubweb/)
+* **Localhost Daemon**: [http://localhost:8000/](http://localhost:8000/)
 
 ---
 
 ## 📄 License
 
-Distributed under the [MIT License](LICENSE).
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.

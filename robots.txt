@@ -1,4 +1,32 @@
+# robots.txt for NTU Semiconductor Club
+# https://ntu-semiconductor-club.github.io/clubweb/
+
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /events.html
+Allow: /committee.html
+Allow: /join.html
+Allow: /assets/
+Allow: /images/
 
+# Specific major crawler directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap Index
 Sitemap: https://ntu-semiconductor-club.github.io/clubweb/sitemap.xml
+Host: https://ntu-semiconductor-club.github.io
